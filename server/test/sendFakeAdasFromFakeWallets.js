@@ -49,4 +49,7 @@ const sendFakeAdas = function (sender, transactionValue) {
 	console.log(txHash);
 };
 
+
+sendFakeAdas('', 25123456) 
+
 module.exports = { sendFakeAdas };
