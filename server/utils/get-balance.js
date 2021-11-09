@@ -1,6 +1,6 @@
 const cardano = require("./cardano")
 
-const sender = cardano.wallet("cryptoMuseumTest")
+const sender = cardano.wallet("walletTest")
 
 console.log(
     sender.balance()
