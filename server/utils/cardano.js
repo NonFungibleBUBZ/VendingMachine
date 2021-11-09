@@ -4,7 +4,7 @@ const path = require("path");
 
 const { getEnv } = require("./getEnv");
 
-const dir = path.join(os.homedir(), "cryptoMuseumMintingServer");
+const dir = path.join(os.homedir(), "vendingMachine/server");
 
 const shelleyPath = path.join(
 	os.homedir(),
