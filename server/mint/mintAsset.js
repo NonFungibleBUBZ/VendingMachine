@@ -9,7 +9,7 @@ let wallet;
 if (getEnv() === "testnet") {
 	wallet = cardanocliJs.wallet("");
 } else {
-	wallet = cardanocliJs.wallet("");
+	wallet = cardanocliJs.wallet("testWallet");
 }
 
 const sender = wallet;
