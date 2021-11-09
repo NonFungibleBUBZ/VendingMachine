@@ -1,8 +1,8 @@
-const { cardanocliJs } = require("../cardano");
+const { cardanocliJs } = require("../utils/cardano");
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
-		"";
+		"addr_test1qzar5myuajym776gpq6neklx8cyd8reg6ujvswcj8xkjdmnl098xjvtpy9qqt5kq0f59dfejyn934k9a9lrmtc65msssf7l295";
 
 	const txInfo = {
 		txIn: cardanocliJs.queryUtxo(sender.paymentAddr),
