@@ -24,6 +24,7 @@ const sendFakeAdas = function (sender, transactionValue) {
 		],
 	};
 
+
 	const raw = cardanocliJs.transactionBuildRaw(txInfo);
 
 	const fee = cardanocliJs.transactionCalculateMinFee({
@@ -40,6 +41,8 @@ const sendFakeAdas = function (sender, transactionValue) {
 		txBody: tx,
 		signingKeys: [sender.payment.skey],
 	});
+
+	console.log('aaaaaaaaaaaa')
 
 	const txHash = cardanocliJs.transactionSubmit(txSigned);
 
