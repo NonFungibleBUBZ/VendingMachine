@@ -1,4 +1,4 @@
-const  cardano  = require("../utils/cardano");
+const { cardano }  = require("../utils/cardano");
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
@@ -50,6 +50,6 @@ const sendFakeAdas = function (sender, transactionValue) {
 };
 
 
-sendFakeAdas('', 25123456) 
+sendFakeAdas('', 25123456)
 
 module.exports = { sendFakeAdas };
