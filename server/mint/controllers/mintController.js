@@ -2,7 +2,7 @@ const { cardanocliJs } = require("../../utils/cardano");
 
 const { getEnv } = require("../../utils/getEnv");
 
-const { getFakeWalletById } = require("./test/utils");
+const { getFakeWalletById } = require("../test/utils");
 
 let wallet;
 
