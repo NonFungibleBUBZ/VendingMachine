@@ -1,4 +1,5 @@
 const { cardanocliJs } = require('../utils/cardano')
+const { getFakeWalletById } = require( "./utils" );
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
@@ -50,6 +51,6 @@ const sendFakeAdas = function (sender, transactionValue) {
 };
 
 
-sendFakeAdas('fake-wallet-0', 25123456)
+sendFakeAdas(getFakeWalletById(0), 25123456)
 
 module.exports = { sendFakeAdas };
