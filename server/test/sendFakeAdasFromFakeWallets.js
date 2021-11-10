@@ -1,4 +1,4 @@
-const { cardanocliJs } = require('../utils/cardanocliJs')
+const { cardanocliJs } = require('../utils/cardano')
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
