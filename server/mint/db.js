@@ -20,7 +20,7 @@ async function register_collection(collectionObj) {
 
     await get_collection();
 
-    return collection_db.ops[0];
+    return collection_db;
 }
 
 
