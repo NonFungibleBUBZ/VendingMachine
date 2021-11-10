@@ -24,24 +24,23 @@ async function register_collection(collectionObj) {
 }
 
 
-async function update_collection(index) {
+async function set_unavailable(index, name) {
 
     console.log('started')
     let db_conn = await db_utils.get_db();
-    let collection_name
     let updatedCollection
     let thisCollection
 
     let allCollections = await db_conn.collection("collections").find({}).toArray();
 
-    setTimeout( async ()=> {
-        thisCollection = allCollections.find(_collection_id => _collection_id.name === collection_name)
+    setTimeout( async () => {
+        thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
 
         if (thisCollection) {
 
-            thisCollection.quantity[index] -= 1;
+            thisCollection.allBubz[index].available = false;
 
-            updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId('TODO')}, thisCollection, {
+            updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
                 w: "majority",
                 upsert: false
             });
@@ -54,5 +53,31 @@ async function update_collection(index) {
 
 }
 
+async function update_collection(name) {
+    let db_conn = await db_utils.get_db();
+    let thisCollection
+    let updatedCollection
+    let allCollections = await db_conn.collection("collections").find({}).toArray();
 
-module.exports = {get_collection, register_collection, update_collection};
+    setTimeout( async () => {
+        thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
+
+        let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
+
+        let unavailableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
+
+        console.log(unavailableBubz)
+
+    /*if (bubz) {
+        thisCollection.availableBubz = thisCollection.availableBubz.filter(value => value.index !== index)
+        updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
+            w: "majority",
+            upsert: false
+        });
+    }*/
+    }, 0)
+}
+
+
+
+module.exports = {get_collection, register_collection, update_collection, set_unavailable};
