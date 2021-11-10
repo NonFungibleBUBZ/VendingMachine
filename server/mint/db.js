@@ -64,9 +64,12 @@ async function update_collection(name) {
 
         let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
 
-        let unavailableBubz = thisCollection.allBubz.filter(bubz => bubz.available !== true)
+        let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
-        console.log(unavailableBubz)
+        availableBubz.forEach(value, (index) => {
+            console.log(index)
+            console.log(value)
+        })
 
     /*if (bubz) {
         thisCollection.availableBubz = thisCollection.availableBubz.filter(value => value.index !== index)
