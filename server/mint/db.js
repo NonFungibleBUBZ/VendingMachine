@@ -66,7 +66,7 @@ async function update_collection(name) {
 
         let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
-        availableBubz.forEach(value, (index) => {
+        availableBubz.forEach( (index, value) => {
             console.log(index)
             console.log(value)
         })
