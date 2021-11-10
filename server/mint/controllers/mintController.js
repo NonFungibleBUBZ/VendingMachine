@@ -150,9 +150,9 @@ const mintController = function ( _metadata, value, addressToSend) {
 		},
 	};
 
-	metadata["721"][`${POLICY_ID}`][_metadata.name.replace(/\s/g, "")] =
+	metadata["721"][`${POLICY_ID}`][_metadata.name.replace(/[^A-Z0-9]+/ig, "")] =
 		_metadata;
-	const ASSET_ID = `${POLICY_ID}.${_metadata.name.replace(/\s/g, "")}`;
+	const ASSET_ID = `${POLICY_ID}.${_metadata.name.replace(/[^A-Z0-9]+/ig, "")}`;
 
 	let txInfo = {};
 
