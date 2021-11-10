@@ -66,13 +66,7 @@ async function update_collection(name) {
 
        // let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
-        thisCollection.allBubz.forEach( (bubz, index) => {
-            bubz['index'] = index
-        })
-        updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
-            w: "majority",
-            upsert: false
-        });
+        console.log(thisCollection.allBubz)
 
 
     /*
