@@ -12,21 +12,6 @@ async function get_collection() {
     return db_entries;
 }
 
-async function get_halloweenQuantityArray() {
-
-    console.log('rs')
-
-    let thisCollection
-
-    let db_conn = await db_utils.get_db();
-
-    let allCollections = await db_conn.collection("collections").find({}).toArray();
-    setTimeout( ()=> {
-        thisCollection = allCollections.find(_collection_id => _collection_id.name === 'Halloween 2021')
-        cache.set("halloweenArray", thisCollection.quantity);
-        return thisCollection.quantity
-    },0)
-}
 
 async function register_collection(collectionObj) {
     let db_conn = await db_utils.get_db();
@@ -39,16 +24,11 @@ async function register_collection(collectionObj) {
 }
 
 
-async function update_collection(collection_id, index) {
+async function update_collection(index) {
 
     console.log('started')
     let db_conn = await db_utils.get_db();
     let collection_name
-
-    if (collection_id === '') {
-        collection_name = 'superC'
-    }
-
     let updatedCollection
     let thisCollection
 
@@ -61,12 +41,12 @@ async function update_collection(collection_id, index) {
 
             thisCollection.quantity[index] -= 1;
 
-            updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(collection_id)}, thisCollection, {
+            updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId('TODO')}, thisCollection, {
                 w: "majority",
                 upsert: false
             });
 
-            await get_halloweenQuantityArray();
+           // await get_halloweenQuantityArray();
 
             console.log('log: ', JSON.stringify(updatedCollection,null,2))
         }
@@ -75,4 +55,4 @@ async function update_collection(collection_id, index) {
 }
 
 
-module.exports = {get_collection, register_collection, update_collection, get_halloweenQuantityArray};
+module.exports = {get_collection, register_collection, update_collection};

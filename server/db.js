@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 
-const url = process.env.MONGO_URL || "";
+const url = process.env.MONGO_URL || "mongodb+srv://rovaris:1234567a@cryptomuseum.nn6tk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 let client = new MongoClient(url);
 let connection;
@@ -11,7 +11,7 @@ async function init_db(){
 
   try {
     connection = await client.connect();
-    database = await client.db('');
+    database = await client.db('nftBubz');
     console.log("Conected");
 
   } catch (e) {
