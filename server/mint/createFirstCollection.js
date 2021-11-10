@@ -1,5 +1,5 @@
 //const db = require('./db')
-const { metadataArray } = require('./metadata/metadata_first_collection')
+const  metadataArray  = require('./metadata/metadata_first_collection')
 
 console.log(metadataArray)
 
