@@ -136,6 +136,9 @@ const testTxOut = function (addressToSend, ASSET_ID, value) {
 };
 
 const mintController = function ( _metadata, value, addressToSend) {
+
+	console.log('ta chamando ou e meme')
+
 	uxtoArray = cardanocliJs.queryUtxo(sender.paymentAddr);
 
 	let txIn = uxtoArray.find(
