@@ -45,7 +45,9 @@ async function set_unavailable(index, name) {
                 upsert: false
             });
 
-           // await get_halloweenQuantityArray();
+            setTimeout( async ()=> {
+              await update_collection(name)
+            },0)
 
             console.log('log: ', JSON.stringify(updatedCollection,null,2))
         }
@@ -62,24 +64,17 @@ async function update_collection(name) {
     setTimeout( async () => {
         thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
 
-       // let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
+        let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
-       // let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
+        thisCollection.availableBubz = availableBubz
 
-        console.log(thisCollection.allBubz)
-
-
-    /*
-    availableBubz.forEach((bubz) => {
-            console.log(bubz)
-        })
-    if (bubz) {
-        thisCollection.availableBubz = thisCollection.availableBubz.filter(value => value.index !== index)
         updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
             w: "majority",
             upsert: false
         });
-    }*/
+
+
+
     }, 0)
 }
 

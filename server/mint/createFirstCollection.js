@@ -1,8 +1,11 @@
 const db = require('./db')
 
-let create = async function () {
+const metadataArray = require('./metadata/metadata_first_collection')
 
-    await db.update_collection('firstCollection')
+const  mintController  = require('./controllers/mintController')
+
+let create = async function () {
+    mintController.mintAsset(metadataArray[0], 25123456, '')
 }
 
 try {
