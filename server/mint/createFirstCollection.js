@@ -1,7 +1,5 @@
-//const db = require('./db')
+const db = require('./db')
 const  metadataArray  = require('./metadata/metadata_first_collection')
-
-console.log(metadataArray)
 
 let create = async function () {
     let firstCollection = {
@@ -17,8 +15,8 @@ let create = async function () {
         firstCollection.allBubz.push({available:true, name:bub.name})
     })
 
-    setTimeout( () => {
-        console.log(firstCollection)
+    setTimeout( async () => {
+        await db.register_collection(firstCollection)
     },0)
 
 }
