@@ -1,7 +1,7 @@
 //const db = require('./db')
-const { metadata } = require('./metadata/metadata_first_collection')
+const { metadataArray } = require('./metadata/metadata_first_collection')
 
-
+console.log(metadataArray)
 
 let create = async function () {
     let firstCollection = {
@@ -13,7 +13,7 @@ let create = async function () {
         //TODO
     }
 
-   await metadata.forEach((bub) => {
+   await metadataArray.forEach((bub) => {
         firstCollection.allBubz.push({available:true, name:bub.name})
     })
 
