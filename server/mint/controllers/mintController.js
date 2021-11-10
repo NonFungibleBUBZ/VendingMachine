@@ -7,9 +7,9 @@ const { getFakeWalletById } = require("../../test/utils");
 let wallet;
 
 if (getEnv() === "testnet") {
-	wallet = cardanocliJs.wallet("");
-} else {
 	wallet = cardanocliJs.wallet("testWallet");
+} else {
+	wallet = cardanocliJs.wallet("");
 }
 
 const sender = wallet;
