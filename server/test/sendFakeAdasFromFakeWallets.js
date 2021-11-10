@@ -51,6 +51,6 @@ const sendFakeAdas = function (sender, transactionValue) {
 };
 
 
-sendFakeAdas(getFakeWalletById(0), 25123456)
+sendFakeAdas(getFakeWalletById(0), 25.123456)
 
 module.exports = { sendFakeAdas };
