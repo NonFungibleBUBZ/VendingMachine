@@ -1,6 +1,6 @@
-const { cardanocliJs } = require("../utils/cardano");
+const { cardanocliJs } = require("../../utils/cardano");
 
-const { getEnv } = require("../utils/getEnv");
+const { getEnv } = require("../../utils/getEnv");
 
 const { getFakeWalletById } = require("./test/utils");
 
@@ -135,7 +135,7 @@ const testTxOut = function (addressToSend, ASSET_ID, value) {
 	return txOutArray;
 };
 
-const mintAsset = function (_metadata, value, addressToSend) {
+const mintController = function ( _metadata, value, addressToSend) {
 	uxtoArray = cardanocliJs.queryUtxo(sender.paymentAddr);
 
 	let txIn = uxtoArray.find(
@@ -185,4 +185,5 @@ const mintAsset = function (_metadata, value, addressToSend) {
 	return txSigned;
 };
 
-module.exports = { mintAsset };
+
+module.exports = { mintAsset: mintController };

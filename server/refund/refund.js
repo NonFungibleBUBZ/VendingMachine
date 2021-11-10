@@ -1,6 +1,5 @@
 const https = require("https");
 
-//Rovaris: comentei pq tava dando erro :thinking:
 const { getEnv } = require("../getEnv");
 
 const { cardanocliJs } = require("../cardano");
@@ -8,6 +7,7 @@ const { cardanocliJs } = require("../cardano");
 let wallet;
 
 if (getEnv() === "testnet") {
+    // input of wallet, TODO make it trough controller
     wallet = cardanocliJs.wallet("");
 } else {
     wallet = cardanocliJs.wallet("");
@@ -25,6 +25,7 @@ const getProjectId = function () {
     let env = getEnv();
 
     if (env === "testnet") {
+        //those are my personal blockFrost api keys, those are also free
         return "0fe5Tr17FcTWgQtajiWrzYO8XIlqyWyG";
     }
 
