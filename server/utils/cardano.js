@@ -17,8 +17,7 @@ const cardanocliJs = new CardanocliJs({
 	era: "alonzo",
 	network: getEnv() == "testnet" ? "testnet-magic 1097911063" : "mainnet",
 	dir,
-	shelleyGenesisPath: shelleyPath,
-	socketPath: path.join(os.homedir(), "cardano-src", "config", "db"),
+	shelleyGenesisPath: shelleyPath
 });
 
 console.log(cardanocliJs.queryUtxo('addr_test1qzar5myuajym776gpq6neklx8cyd8reg6ujvswcj8xkjdmnl098xjvtpy9qqt5kq0f59dfejyn934k9a9lrmtc65msssf7l295'))
