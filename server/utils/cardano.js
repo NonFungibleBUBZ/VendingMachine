@@ -21,6 +21,6 @@ const cardanocliJs = new CardanocliJs({
 	socketPath: path.join(os.homedir(), "cardano-src", "config", "db"),
 });
 
-cardanocliJs.queryUtxo('addr_test1qzar5myuajym776gpq6neklx8cyd8reg6ujvswcj8xkjdmnl098xjvtpy9qqt5kq0f59dfejyn934k9a9lrmtc65msssf7l295')
+console.log(cardanocliJs.queryUtxo('addr_test1qzar5myuajym776gpq6neklx8cyd8reg6ujvswcj8xkjdmnl098xjvtpy9qqt5kq0f59dfejyn934k9a9lrmtc65msssf7l295'))
 
 module.exports = { cardanocliJs };
