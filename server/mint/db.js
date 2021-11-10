@@ -62,7 +62,7 @@ async function update_collection(name) {
     setTimeout( async () => {
         thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
 
-        let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
+       // let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
 
         let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
