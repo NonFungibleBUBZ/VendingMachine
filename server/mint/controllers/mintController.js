@@ -148,7 +148,7 @@ const mintController = function ( _metadata, value, addressToSend) {
 	const metadata = {
 		721: {
 			[POLICY_ID]: {
-				[_metadata.name.replace(/\s/g, "")]: {},
+				[_metadata.name.replace(/[^A-Z0-9]+/ig, "")]: {},
 			},
 		},
 	};
