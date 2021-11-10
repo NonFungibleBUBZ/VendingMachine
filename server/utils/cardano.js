@@ -14,9 +14,11 @@ const shelleyPath = path.join(
 
 const cardanocliJs = new CardanocliJs({
 	//   era: "mary",
+	era: "alonzo",
 	network: getEnv() == "testnet" ? "testnet-magic 1097911063" : "mainnet",
 	dir,
 	shelleyGenesisPath: shelleyPath,
+	socketPath: path.join(os.homedir(), "cardano-src", "config", "db"),
 });
 
 
