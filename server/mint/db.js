@@ -64,14 +64,22 @@ async function update_collection(name) {
 
        // let bubz = thisCollection.allBubz.find(bubz => ((!bubz.availableBubz) && thisCollection.availableBubz.find(_bubz => _bubz.name === bubz.name) !== undefined))
 
-        let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
+       // let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
 
-        availableBubz.forEach( (index, value) => {
-            console.log(index)
-            console.log(value)
+        thisCollection.allBubz.forEach( (bubz, index) => {
+            bubz['index'] = index
         })
+        updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
+            w: "majority",
+            upsert: false
+        });
 
-    /*if (bubz) {
+
+    /*
+    availableBubz.forEach((bubz) => {
+            console.log(bubz)
+        })
+    if (bubz) {
         thisCollection.availableBubz = thisCollection.availableBubz.filter(value => value.index !== index)
         updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
             w: "majority",
