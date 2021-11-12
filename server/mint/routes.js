@@ -8,6 +8,8 @@ router.get ('/', (req,res) => {
     return res.status(200).json({"message":"report working"});
 })
 
+console.log(mintController)
+
 router.get("/mint", mintController);
 
 module.exports = router;
