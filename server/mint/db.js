@@ -47,18 +47,18 @@ async function set_unavailable(index, name) {
     setTimeout( async () => {
         thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
 
-        console.log(thisCollection)
-
         if (thisCollection) {
 
             thisCollection.allBubz[index].available = false;
+
+            console.log(thisCollection.allBubz[index], " this bub")
 
             updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
                 w: "majority",
                 upsert: false
             });
 
-            console.log(JSON.stringify(updatedCollection, null,2))
+            console.log(JSON.stringify(updatedCollection, null,2), " jsonStringfy pa")
 
             setTimeout( async ()=> {
               await update_collection(name)
@@ -88,10 +88,10 @@ async function update_collection(name) {
                 upsert: false
             });
 
-            console.log(JSON.stringify(updatedCollection, null,2))
-
-            await get_collection();
-            await get_availableBubz();
+            setTimeout( async()=> {
+                await get_collection();
+                await get_availableBubz();
+            },0)
         }
 
     }, 0)
