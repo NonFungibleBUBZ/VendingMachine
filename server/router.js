@@ -10,6 +10,7 @@ router.get('/test', (req,res) => {
 })
 
 router.use('/mint', require('./mint/routes'));
+
 router.use('/report', require('./report/routes'));
 
 module.exports = router;
