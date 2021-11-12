@@ -8,6 +8,6 @@ router.get ('/', (req,res) => {
     return res.status(200).json({"message":"report working"});
 })
 
-router.get("/mint", autoMintHandler);
+router.get("/autoMint", autoMintHandler);
 
 module.exports = router;
