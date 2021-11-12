@@ -38,7 +38,6 @@ async function register_collection(collectionObj) {
 
 async function set_unavailable(index, name) {
 
-    console.log('started')
     let db_conn = await db_utils.get_db();
     let updatedCollection
     let thisCollection
@@ -47,6 +46,8 @@ async function set_unavailable(index, name) {
 
     setTimeout( async () => {
         thisCollection = allCollections.find(_collection_id => _collection_id.name === name)
+
+        console.log(thisCollection)
 
         if (thisCollection) {
 
@@ -61,7 +62,6 @@ async function set_unavailable(index, name) {
               await update_collection(name)
             },0)
 
-            console.log('log: ', JSON.stringify(updatedCollection,null,2))
         }
     }, 0)
 

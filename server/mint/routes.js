@@ -10,6 +10,4 @@ router.get ('/', (req,res) => {
 
 router.get("/autoMint", autoMintHandler);
 
-console.log(router)
-
 module.exports = router;

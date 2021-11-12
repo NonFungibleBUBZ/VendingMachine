@@ -29,8 +29,6 @@ let create = async function () {
         ]
     }
 
-    console.log(txInfo);
-
     const raw = cardanocliJs.transactionBuildRaw(txInfo)
 
     const fee = cardanocliJs.transactionCalculateMinFee({
@@ -50,12 +48,11 @@ let create = async function () {
 
     const txHash = cardanocliJs.transactionSubmit(txSigned)
 
-    console.log(txHash)
 }
 
 try {
     create().then( () => {
-        console.log('done')
+
     })
 } catch (err) {
     console.log(err)

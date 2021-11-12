@@ -153,8 +153,6 @@ const autoMintHandler = function (req, res) {
 
     const currentUtxos = wallet.balance().utxo;
 
-    console.log(currentUtxos, " currentUtxos")
-
     for (let i = 0; i < currentUtxos.length; i++) {
         const utxo = currentUtxos[i];
 
@@ -167,8 +165,6 @@ const autoMintHandler = function (req, res) {
 
                 setTimeout( ()=> {
 
-                    console.log(availableBubz, " availableBubz")
-
                     mints = [
                         ...mints,
                         { address: address, txHash: utxo.txHash },
@@ -180,7 +176,6 @@ const autoMintHandler = function (req, res) {
 
                     utxos[utxo.txHash] = false;
 
-                    console.table(mints);
                 },5000)
 
             });
@@ -240,7 +235,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
     if (txHash) {
         set_unavailable(index).then( ()=> {
-            console.log(txHash)
+
         })
     }
 };
