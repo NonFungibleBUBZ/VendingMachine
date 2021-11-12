@@ -16,9 +16,7 @@ async function init_db(){
 
   } catch (e) {
     console.log(e);
-
   }
-
   return database;
 }
 

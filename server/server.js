@@ -23,6 +23,8 @@ app.use(body_parser.json());
 
 app.use(router);
 
+console.log(JSON.stringify(router,null,2))
+
 async function initialize_database() {
     console.log("starting db...");
     let _db = await db.init_db()
