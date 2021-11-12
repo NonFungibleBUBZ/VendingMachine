@@ -13,4 +13,8 @@ async function update_collection() {
     return await db.update_collection('firstCollection')
 }
 
-module.exports = {  get_collections, update_collection, set_unavailable };
+async function get_availableBubz() {
+    return await db.get_availableBubz()
+}
+
+module.exports = {  get_collections, update_collection, set_unavailable, get_availableBubz };

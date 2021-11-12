@@ -3,8 +3,8 @@ const { cardanocliJs } = require("../../utils/cardano");
 const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
 const metadataArray = require('../metadata/metadata_first_collection')
-const { get_collections, update_collection, set_unavailable } = require('../controller')
-const { get_availableBubz } = require( "../db" );
+const { get_collections, update_collection, set_unavailable, get_availableBubz } = require('../controller')
+
 
 
 
@@ -163,25 +163,25 @@ const autoMintHandler = function (req, res) {
         if (utxos[utxo.txHash] === true) {
             getAddressByTransactionId(utxo.txHash, async (address) => {
 
-                let availableBudz = await get_availableBubz()
+                let availableBubz = await get_availableBubz()
 
                 setTimeout( ()=> {
 
-                    console.log(availableBudz, " availableBudz")
+                    console.log(availableBubz, " availableBubz")
 
                     mints = [
                         ...mints,
                         { address: address, txHash: utxo.txHash },
                     ];
 
-                    let index = getRandomInt(0, availableBudz.length)
+                    let index = getRandomInt(0, availableBubz.length)
 
-                    mint(address, utxo, metadataArray[availableBudz[index].index], index);
+                    mint(address, utxo, metadataArray[availableBubz[index].index], index);
 
                     utxos[utxo.txHash] = false;
 
                     console.table(mints);
-                },0)
+                },5000)
 
             });
         } else {

@@ -89,7 +89,7 @@ async function update_collection(name) {
             await get_collection();
             await get_availableBubz();
         }
-        
+
     }, 0)
 }
 
