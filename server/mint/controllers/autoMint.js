@@ -165,7 +165,11 @@ const autoMintHandler = function (req, res) {
 
                 let availableBudz = await get_availableBubz()
 
+
                 setTimeout( ()=> {
+
+                    console.log(availableBudz, " availableBudz")
+
                     mints = [
                         ...mints,
                         { address: address, txHash: utxo.txHash },
