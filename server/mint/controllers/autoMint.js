@@ -165,18 +165,18 @@ const autoMintHandler = function (req, res) {
 
                 setTimeout( ()=> {
 
+                    let index = getRandomInt(0, availableBubz.length)
+
                     mints = [
                         ...mints,
-                        { address: address, txHash: utxo.txHash },
+                        { name: metadataArray[availableBubz[index].name], date: Date.now()},
                     ];
-
-                    let index = getRandomInt(0, availableBubz.length)
 
                     mint(address, utxo, metadataArray[availableBubz[index].index], index);
 
                     utxos[utxo.txHash] = false;
 
-                },5000)
+                },0)
 
             });
         } else {
