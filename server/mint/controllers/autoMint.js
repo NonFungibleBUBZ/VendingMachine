@@ -1,5 +1,5 @@
 const { getEnv } = require("../../utils/getEnv");
-const { cardanocliJs } = require("../cardano");
+const { cardanocliJs } = require("../../utils/cardano");
 const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
 const metadataArray = require('../metadata/metadata_first_collection')
