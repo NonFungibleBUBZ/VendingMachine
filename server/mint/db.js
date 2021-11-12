@@ -12,6 +12,19 @@ async function get_collection() {
     return db_entries;
 }
 
+async function get_availableBubz() {
+    let db_conn = await db_utils.get_db();
+
+    let db_entries = await db_conn.collection("collections").find({}).toArray();
+
+    db_entries = db_entries.find(collection => collection.name === 'firstCollection')
+
+    db_entries = db_entries.availableBubz
+
+    cache.set("availableBubz", db_entries);
+
+    return db_entries;
+}
 
 async function register_collection(collectionObj) {
     let db_conn = await db_utils.get_db();
@@ -22,7 +35,6 @@ async function register_collection(collectionObj) {
 
     return collection_db;
 }
-
 
 async function set_unavailable(index, name) {
 
@@ -53,6 +65,8 @@ async function set_unavailable(index, name) {
         }
     }, 0)
 
+
+
 }
 
 async function update_collection(name) {
@@ -73,11 +87,11 @@ async function update_collection(name) {
             upsert: false
         });
 
-
-
+        await get_collection();
+        await get_availableBubz();
     }, 0)
 }
 
 
 
-module.exports = {get_collection, register_collection, update_collection, set_unavailable};
+module.exports = {get_collection, register_collection, update_collection, set_unavailable, get_availableBubz};
