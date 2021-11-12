@@ -165,7 +165,6 @@ const autoMintHandler = function (req, res) {
 
                 let availableBudz = await get_availableBubz()
 
-
                 setTimeout( ()=> {
 
                     console.log(availableBudz, " availableBudz")
