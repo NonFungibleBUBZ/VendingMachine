@@ -1,4 +1,4 @@
-const { getEnv } = require("../../getEnv");
+const { getEnv } = require("../../utils/getEnv");
 const { cardanocliJs } = require("../cardano");
 const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
