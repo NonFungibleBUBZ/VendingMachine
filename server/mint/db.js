@@ -81,6 +81,7 @@ async function update_collection(name) {
         if (thisCollection) {
             let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true)
             thisCollection.availableBubz = availableBubz
+            console.log(availableBubz)
             updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
                 w: "majority",
                 upsert: false
