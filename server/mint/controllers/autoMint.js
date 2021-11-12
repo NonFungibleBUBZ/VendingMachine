@@ -211,7 +211,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(25)),
+        txOut: createTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(25.123456)),
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript },
         ],
