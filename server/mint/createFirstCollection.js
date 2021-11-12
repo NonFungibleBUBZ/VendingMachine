@@ -3,8 +3,10 @@ const metadataArray = require('./metadata/metadata_first_collection')
 const  mintController  = require('./controllers/mintController')
 const { cardanocliJs } = require( "../utils/cardano" );
 
+let wallet = cardanocliJs.wallet('fake-wallet-0')
+
 let create = async function () {
-    await db.update_collection('firstCollection')
+    console.log(wallet.balance())
 }
 
 try {
