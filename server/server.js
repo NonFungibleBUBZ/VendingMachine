@@ -1,7 +1,7 @@
 const express = require('express');
 const body_parser = require('body-parser');
 const app = express();
-const  routes  = require('./routes');
+const router = require('./routes');
 const db = require('./db');
 
 app.use(function(req, res, next) {
@@ -21,9 +21,9 @@ app.use(body_parser.urlencoded({ extended: true }));
 
 app.use(body_parser.json());
 
-app.use(routes);
+app.use(router);
 
-console.log(JSON.stringify(routes,null,2))
+console.log(JSON.stringify(router,null,2))
 
 async function initialize_database() {
     console.log("starting db...");
