@@ -58,6 +58,8 @@ async function set_unavailable(index, name) {
                 upsert: false
             });
 
+            console.log(JSON.stringify(updatedCollection, null,2))
+
             setTimeout( async ()=> {
               await update_collection(name)
             },0)
@@ -85,6 +87,8 @@ async function update_collection(name) {
                 w: "majority",
                 upsert: false
             });
+
+            console.log(JSON.stringify(updatedCollection, null,2))
 
             await get_collection();
             await get_availableBubz();

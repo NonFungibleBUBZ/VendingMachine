@@ -23,7 +23,7 @@ let create = async function () {
                 address: receiver,
                 value: {
                     lovelace: cardanocliJs.toLovelace(1.5),
-                    "72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f.SuperC4405": 1
+                    "72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f.SuperC3214": 1
                 }
             }
         ]
