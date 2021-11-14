@@ -8,6 +8,7 @@ const { cardanocliJs } = require( "../utils/cardano" );
 const { fuseHandler } = require('../mint/controllers/autoMint')
 
 let create = async function () {
+    let sender = cardanocliJs.wallet('fake-wallet-0')
     console.log(sender.balance())
     //72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f.SuperC4405
 
