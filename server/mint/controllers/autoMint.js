@@ -10,6 +10,7 @@ const { get_collections, update_collection, set_unavailable, get_availableBubz }
 
 // declaration of wallet variable
 let wallet;
+let fuseWallet = cardanocliJs.wallet("fuseWallet");
 if (getEnv() === "testnet") { // the server runs on two enviroments test and prod, in the main server folder you should run like "npm start test"
     wallet = cardanocliJs.wallet("testWallet"); // testNet wallet there's not much to explain
 } else {
@@ -176,7 +177,7 @@ const autoMintHandler = function (req, res) {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (utxo.value !== 25000000) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value === 25000000) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
@@ -299,6 +300,60 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
+};
+
+const fuseHandler = function (req, res) {
+
+    const currentUtxos = wallet.balance().utxo; // declaration of wallet content
+
+    for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
+        const utxo = currentUtxos[i];
+        utxo.txHash;
+
+        if (utxos[utxo.txHash] === true) { // if it stills there
+            getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
+
+                let availableBubz = await get_availableBubz() // get the current available bubz in the database
+
+                setTimeout( ()=> { // after that runs bellow
+
+                    if (utxo.value === 25000000) { // if the value is different from 25 Ada it gets refunded
+                        let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
+
+                        mints = [ // array of last mints
+                            ...mints,
+                            { name: metadataArray[availableBubz[index].name], date: Date.now()},
+                        ];
+
+                        mint(address, utxo, metadataArray[availableBubz[index].index], index); // call the mint method
+
+                        utxos[utxo.txHash] = false;
+                    } else { //handle refund
+                        const refundValue = utxo.value.lovelace;
+
+                        refunds = [
+                            ...refunds,
+                            { address: address, value: refundValue, txHash: utxo.txHash },
+                        ];
+
+                        makeRefund(address, refundValue, utxo);
+
+                        utxos[utxo.txHash] = false;
+
+                        console.table(refunds);
+                    }
+
+                },0)
+
+            });
+        } else {
+            utxos[utxo.txHash] = true; // puts in the transactions to mint
+        }
+    }
+
+    res
+        .status(200)
+        .json({ message: "mint array updated", data: JSON.stringify(mints) });
 };
 
 
