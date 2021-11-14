@@ -516,7 +516,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
         metadata, // note the metadata here
-        witnessCount: 2
+        witnessCount: 3
     };
 
     const raw = cardanocliJs.transactionBuildRaw(txInfo); //build the transaction raw
@@ -524,7 +524,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
     const fee = cardanocliJs.transactionCalculateMinFee({ // calculates the fee
         ...txInfo,
         txBody: raw,
-        witnessCount: 1,
+        witnessCount: 3,
     });
 
     txInfo.txOut[0].value.lovelace -= fee; // value minus fee
