@@ -309,15 +309,11 @@ const fuseHandler = function () {
     const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
+
         const utxo = currentUtxos[i];
         utxo.txHash;
-        console.log(fuseWallet.paymentAddr)
-        console.log()
-        Object.keys(utxo.value)
-        var x =  Object.keys(utxo.value)[1]
-        console.log(x)
-        console.log(x.includes(POLICY_ID))
-
+        let thisBud = Object.keys(utxo.value)[1].substring(63,4)
+        console.log(+thisBud - 1)
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
@@ -326,7 +322,11 @@ const fuseHandler = function () {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f')) { // if there's an token on the utxo and it has the policyId
+                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === 25000000) {
+                        // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
+                        let thisBud = Object.keys(utxo.value)[1].substring(63,4)
+                        console.log(+thisBud - 1)
+                        return
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
