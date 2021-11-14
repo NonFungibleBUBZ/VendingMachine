@@ -428,8 +428,6 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
 
 const fuseHandler = function () {
 
-    console.log(fuseWallet.paymentAddr)
-
     const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
