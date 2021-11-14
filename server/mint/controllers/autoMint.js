@@ -316,7 +316,7 @@ const fuseHandler = function () {
         Object.keys(utxo.value)
         var x =  Object.keys(utxo.value)[1]
         console.log(x)
-        console.log(x.includes('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f'))
+        console.log(x.includes(POLICY_ID))
 
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
@@ -326,7 +326,7 @@ const fuseHandler = function () {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (Object.keys(utxo.value)[1]) { // if there's
+                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f')) { // if there's an token on the utxo and it has the policyId
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
