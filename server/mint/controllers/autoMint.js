@@ -316,6 +316,8 @@ const fuseHandler = function () {
         Object.keys(utxo.value)
         var x =  Object.keys(utxo.value)[1]
         console.log(x)
+        console.log(x.contains('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f'))
+
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
@@ -324,7 +326,7 @@ const fuseHandler = function () {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (utxo.value === 25000000) { // if the value is different from 25 Ada it gets refunded
+                    if (Object.keys(utxo.value)[1]) { // if there's
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
