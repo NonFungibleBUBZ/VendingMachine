@@ -309,7 +309,8 @@ const fuseHandler = function (req, res) {
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
         utxo.txHash;
-        console.log(utxo)
+        console.log(fuseWallet.paymentAddr)
+        return
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
 
