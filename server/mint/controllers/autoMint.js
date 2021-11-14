@@ -302,7 +302,9 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
     const txHash = cardanocliJs.transactionSubmit(txSigned);
 };
 
-const fuseHandler = function (req, res) {
+const fuseHandler = function () {
+
+    console.log(fuseWallet.paymentAddr)
 
     const currentUtxos = wallet.balance().utxo; // declaration of wallet content
 
