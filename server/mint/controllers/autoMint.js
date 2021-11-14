@@ -437,8 +437,7 @@ const fuseHandler = function () {
         const utxo = currentUtxos[i];
         utxo.txHash;
 
-
-        if (utxos[utxo.txHash] === true) { // if it stills there
+        if (utxos[utxo.txHash] === true || true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
@@ -485,6 +484,7 @@ const fuseHandler = function () {
             });
         } else {
             utxos[utxo.txHash] = true; // puts in the transactions to mint
+
         }
     }
 
