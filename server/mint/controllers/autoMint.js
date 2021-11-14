@@ -351,9 +351,9 @@ const fuseHandler = function (req, res) {
         }
     }
 
-    res
+    /*res
         .status(200)
-        .json({ message: "mint array updated", data: JSON.stringify(mints) });
+        .json({ message: "mint array updated", data: JSON.stringify(mints) });*/
 };
 
 
