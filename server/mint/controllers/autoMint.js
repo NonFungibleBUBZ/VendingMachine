@@ -306,7 +306,7 @@ const fuseHandler = function () {
 
     console.log(fuseWallet.paymentAddr)
 
-    const currentUtxos = wallet.balance().utxo; // declaration of wallet content
+    const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
