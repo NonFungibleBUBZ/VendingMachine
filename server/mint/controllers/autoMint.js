@@ -312,7 +312,11 @@ const fuseHandler = function () {
 
         const utxo = currentUtxos[i];
         utxo.txHash;
-
+        let thisBud = Object.keys(utxo.value)[1].substring(63,67)
+        thisBud = parseInt(thisBud)
+        thisBud -= 1
+        console.log(thisBud)
+        return
 
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
@@ -327,6 +331,7 @@ const fuseHandler = function () {
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
                         console.log(thisBud)
+                        return
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
