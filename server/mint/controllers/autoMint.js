@@ -430,7 +430,7 @@ const fuseHandler = function () {
 
     const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
-    console.log(utxo)
+    console.log(currentUtxos)
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
 
