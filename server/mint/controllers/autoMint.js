@@ -60,8 +60,132 @@ const createTxOut = function (addressToSend, ASSET_ID, value) {
     throw "enviroment not defined, try: test or prod"; // simple err throw
 };
 
+const createFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
+    if (getEnv() === "testnet") {
+        return testFuseTxOut(addressToSend, ASSET_ID, value, oldASSET_ID);
+    }
+
+    if (getEnv() === "mainnet") {
+        return prodFuseTxOut(addressToSend, ASSET_ID, value, oldASSET_ID);
+    }
+
+    throw "enviroment not defined, try: test or prod"; // simple err throw
+};
+
 
 // production transaction build
+const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
+
+    let valorAtual = value; // currentValue declaration thats what you going to receive at the end
+
+    const clientValue = cardanocliJs.toLovelace(1.5); // the minimun value to send along with the token
+    const disposalValue = cardanocliJs.toLovelace(1.5);
+
+    valorAtual -= clientValue + disposalValue;
+
+    const secondValue = Math.floor(0.4 * valorAtual); // 40% to the second wallet
+
+    valorAtual -= secondValue;
+
+    const valorRovaris = cardanocliJs.toLovelace(1); // 1 ada to the dev
+
+    valorAtual -= valorRovaris; // to remove my part you should remove this
+
+    const firstValue = valorAtual; // the remaining for you
+
+    let txOutArray = [
+        {
+            address: firstWallet,
+            value: { lovelace: firstValue },
+        },
+        {
+            address: secondWallet,
+            value: { lovelace: secondValue },
+        },
+
+        {
+            address: devWallet,
+            value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
+        },
+
+        {
+            address: addressToSend,
+            value: {
+                lovelace: clientValue,
+                [ASSET_ID]: 1,
+            },
+        },
+        {
+            address: '',
+            value: {
+                lovelace: disposalValue,
+                [oldASSET_ID]: 1,
+            },
+        },
+    ];
+
+    return txOutArray;
+};
+
+const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { // test method, you shouldn't care much fro this, will be used fro test purposes only, but is the same transaction as the prod above
+    const carteiraUm = getFakeWalletById(1).paymentAddr;
+
+    const carteiraDois = getFakeWalletById(2).paymentAddr;
+
+    const carteiraTres = getFakeWalletById(3).paymentAddr;
+
+    const carteiraQuatro = getFakeWalletById(4).paymentAddr;
+
+    let valorAtual = value;
+
+    const valorUm = cardanocliJs.toLovelace(1);
+
+    valorAtual -= valorUm;
+
+    const clientValue = cardanocliJs.toLovelace(1.5);
+
+    const disposalValue = cardanocliJs.toLovelace(1.5);
+
+    valorAtual -= clientValue;
+
+    const valorDois = Math.floor(0.25 * valorAtual);
+
+    valorAtual -= valorDois;
+
+    const valorTres = valorAtual;
+
+    let txOutArray = [
+        {
+            address: carteiraTres,
+            value: { lovelace: valorTres },
+        },
+        {
+            address: carteiraDois,
+            value: { lovelace: valorDois },
+        },
+
+        {
+            address: carteiraUm,
+            value: { lovelace: valorUm },
+        },
+
+        {
+            address: addressToSend,
+            value: {
+                lovelace: clientValue,
+                [ASSET_ID]: 1,
+            },
+        },{
+            address: carteiraQuatro,
+            value: {
+                lovelace: disposalValue,
+                [oldASSET_ID]: 1,
+            },
+        },
+    ];
+
+    return txOutArray;
+};
 const prodTxOut = function (addressToSend, ASSET_ID, value) {
 
     let valorAtual = value; // currentValue declaration thats what you going to receive at the end
@@ -312,11 +436,7 @@ const fuseHandler = function () {
 
         const utxo = currentUtxos[i];
         utxo.txHash;
-        let thisBud = Object.keys(utxo.value)[1].substring(63,67)
-        thisBud = parseInt(thisBud)
-        thisBud -= 1
-        console.log(thisBud)
-        return
+
 
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
@@ -330,16 +450,19 @@ const fuseHandler = function () {
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
-                        console.log(thisBud)
-                        return
-                        let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
+
+                        let index = getRandomInt(thisBud, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
+
+                        while (index > availableBubz.length) {
+                            index = getRandomInt(thisBud, availableBubz.length)
+                        }
 
                         mints = [ // array of last mints
                             ...mints,
                             { name: metadataArray[availableBubz[index].name], date: Date.now()},
                         ];
 
-                        mint(address, utxo, metadataArray[availableBubz[index].index], index); // call the mint method
+                        fuse(address, utxo, metadataArray[availableBubz[index].index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -368,6 +491,57 @@ const fuseHandler = function () {
     /*res
         .status(200)
         .json({ message: "mint array updated", data: JSON.stringify(mints) });*/
+};
+
+const fuse = function (receiver, utxo, _metadata, index) {
+    const sender = wallet;
+
+    const metadata = { // declares the basse of the transaction metadata
+        721: {
+            [POLICY_ID]: {
+                [_metadata.name.replace(/[^A-Z0-9]+/ig, "")]: {},
+            },
+        },
+    };
+
+    // then adds the name and metadata from the metadataArray that was passed trough parameter
+    metadata["721"][`${POLICY_ID}`][_metadata.name.replace(/[^A-Z0-9]+/ig, "")] =
+        _metadata;
+    const ASSET_ID = `${POLICY_ID}.${_metadata.name.replace(/[^A-Z0-9]+/ig, "")}`;
+
+    const txInfo = {
+        txIn: [utxo],
+        txOut: createFuseTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(25), Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        mint: [
+            { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
+        ],
+        metadata, // note the metadata here
+        witnessCount: 2
+    };
+
+    const raw = cardanocliJs.transactionBuildRaw(txInfo); //build the transaction raw
+
+    const fee = cardanocliJs.transactionCalculateMinFee({ // calculates the fee
+        ...txInfo,
+        txBody: raw,
+        witnessCount: 1,
+    });
+
+    txInfo.txOut[0].value.lovelace -= fee; // value minus fee
+
+    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee }); // build the actual transaction
+
+    const txSigned = cardanocliJs.transactionSign({ // sign the transaction
+        txBody: tx,
+        signingKeys: [sender.payment.skey],
+    });
+
+    const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
+
+    if (txHash) { // if the transaction ocurred without error then it sets the bub unavailable
+        set_unavailable(index).then( ()=> {
+        })
+    }
 };
 
 
