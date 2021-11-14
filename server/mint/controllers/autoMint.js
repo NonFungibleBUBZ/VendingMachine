@@ -438,7 +438,7 @@ const fuseHandler = function () {
         const utxo = currentUtxos[i];
         utxo.txHash;
 
-        if (utxos[utxo.txHash] === true || true) { // if it stills there
+        if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
@@ -489,9 +489,9 @@ const fuseHandler = function () {
         }
     }
 
-    /*res
+    res
         .status(200)
-        .json({ message: "mint array updated", data: JSON.stringify(mints) });*/
+        .json({ message: "mint array updated", data: JSON.stringify(mints) });
 };
 
 const fuse = function (receiver, utxo, _metadata, index) {
