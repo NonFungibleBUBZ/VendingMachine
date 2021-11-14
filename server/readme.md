@@ -52,5 +52,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <p>right after cloning the repo in a linux enviroment with cardano-node/cli sync and running:</p>
 <pre><code>run npm install --save</code></pre>
-<pre><code>npm start server.js prod</code></pre>
-<pre><code>npm start server.js test / for test enviroment</code></pre>
+<pre><code>npm start prod</code></pre>
+<pre><code>npm start test / for test enviroment</code></pre>

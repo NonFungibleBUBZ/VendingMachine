@@ -1,10 +1,12 @@
-const db = require('./db')
+// don't mind this script i used it multiple times to do multiple tests
+
+
+
+/* const db = require('./db')
 const metadataArray = require('./metadata/metadata_first_collection')
-const  mintController  = require('./controllers/mintController')
 const { cardanocliJs } = require( "../utils/cardano" );
 
 let sender = cardanocliJs.wallet('fake-wallet-0')
-
 let create = async function () {
     console.log(sender.balance())
     //72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f.SuperC4405
@@ -57,3 +59,4 @@ try {
 } catch (err) {
     console.log(err)
 }
+*/
