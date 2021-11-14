@@ -313,7 +313,7 @@ const fuseHandler = function () {
         const utxo = currentUtxos[i];
         utxo.txHash;
         let thisBud = Object.keys(utxo.value)[1].substring(63,4)
-        console.log(+thisBud - 1)
+        console.log(parseInt(thisBud) - 1)
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
