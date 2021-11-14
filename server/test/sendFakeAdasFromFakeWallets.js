@@ -3,7 +3,7 @@ const { getFakeWalletById } = require( "./utils" );
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
-		"addr_test1qzar5myuajym776gpq6neklx8cyd8reg6ujvswcj8xkjdmnl098xjvtpy9qqt5kq0f59dfejyn934k9a9lrmtc65msssf7l295";
+		"addr_test1qpdujke2ysnfs7xxglc2r3p5je6h6cffdfr3j6ltw4keu3v7f8ej7v5yx6g5wq7gvqe57accm7vv278l3hlfa86vrnlsxde8c9";
 
 	const txInfo = {
 		txIn: cardanocliJs.queryUtxo(sender.paymentAddr),
