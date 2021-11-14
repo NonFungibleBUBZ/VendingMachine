@@ -312,7 +312,10 @@ const fuseHandler = function () {
         const utxo = currentUtxos[i];
         utxo.txHash;
         console.log(fuseWallet.paymentAddr)
-        console.log(utxo.value[1])
+        console.log()
+        Object.keys(utxo.value)
+        var x =  Object.keys(utxo.value)[1]
+        console.log(x)
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
             getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
