@@ -312,7 +312,7 @@ const fuseHandler = function () {
 
         const utxo = currentUtxos[i];
         utxo.txHash;
-        let thisBud = Object.keys(utxo.value)[1].substring(4,63)
+        let thisBud = Object.keys(utxo.value)[1].substring(63,67)
         console.log(thisBud)
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
