@@ -316,7 +316,7 @@ const fuseHandler = function () {
         Object.keys(utxo.value)
         var x =  Object.keys(utxo.value)[1]
         console.log(x)
-        console.log(x.contains('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f'))
+        console.log(x.includes('72a347b015f5da23a00e5208f58bbff3c5a17f623386337308a5709f'))
 
         return
         if (utxos[utxo.txHash] === true) { // if it stills there
