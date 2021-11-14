@@ -147,6 +147,7 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
     const disposalValue = cardanocliJs.toLovelace(1.5);
 
     valorAtual -= clientValue;
+    valorAtual -= disposalValue;
 
     const valorDois = Math.floor(0.25 * valorAtual);
 
