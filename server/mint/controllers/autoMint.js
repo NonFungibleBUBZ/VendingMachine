@@ -325,7 +325,7 @@ const fuseHandler = function () {
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === 25000000) {
                         // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
                         let thisBud = Object.keys(utxo.value)[1].substring(63,4)
-                        console.log(+thisBud - 1)
+                        console.log(parseInt(thisBud) - 1)
                         return
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
