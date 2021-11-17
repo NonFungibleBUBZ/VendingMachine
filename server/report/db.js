@@ -9,6 +9,7 @@ const cache = require('../memoryCache');
 
 // like the first method that returns all the collections, this method returns all the available bubz to mint
 async function get_availableBubz() {
+    console.log('a')
     let db_conn = await db_utils.get_db(); // connects to the db
 
     let db_entries = await db_conn.collection("collections").find({}).toArray(); // gets all the collections

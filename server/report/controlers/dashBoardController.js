@@ -7,7 +7,7 @@ const reportHandler = async function (req, res) {
     setTimeout( ()=> {
         res
             .status(200)
-            .json({ message: "report test", data: JSON.stringify(returnAvailablebubz) });
+            .json({ message: "report test", data: returnAvailablebubz});
     },0)
 }
 
