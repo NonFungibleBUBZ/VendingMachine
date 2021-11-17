@@ -1,16 +1,10 @@
 // don't mind this script i used it multiple times to do multiple tests
-
-
-// don't mind this script i used it multiple times to do multiple tests
-const db = require('./db')
-const metadataArray = require('./metadata/metadata_first_collection')
 const { cardanocliJs } = require( "../utils/cardano" );
 const { fuseHandler } = require('../mint/controllers/autoMint')
 
 let create = async function () {
-
-    console.log('ta chamando ne')
-    await fuseHandler()
+    console.log(cardanocliJs.wallet('fuseWallet').paymentAddr)
+    console.log(cardanocliJs.wallet('testWallet').paymentAddr)
 }
 
 try {
@@ -22,7 +16,10 @@ try {
 }
 
 
-/* const db = require('./db')
+/*
+
+
+const db = require('./db')
 const metadataArray = require('./metadata/metadata_first_collection')
 const { cardanocliJs } = require( "../utils/cardano" );
 

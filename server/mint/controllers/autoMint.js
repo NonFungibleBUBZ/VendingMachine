@@ -22,6 +22,10 @@ let utxos = {};
 let mints = [];
 let refunds = [];
 
+// defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
+// if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
+let tokenPrice = 25000000
+
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
 const mintScript = {
     keyHash: cardanocliJs.addressKeyHash(wallet.name),
@@ -35,7 +39,7 @@ const firstWallet = // this should be your personal wallet to receive funds
 const secondWallet = // this should be the wallet of the charity project
     "";
 
-const devWallet = // and this is my wallet considered leaving it here, i've comented every script with detailed instructions, and i've made the server easy for you :3
+const devWallet = // and this is my wallet considered leaving it here, i've commented every script with detailed instructions, and i've made the server easy for you :3
     "addr1qxcd03zuth7gjlxwsgswfzm0tvk2x9z9ghgeljq6xt89hynfxr35pxlj7p3c8kv7w3ue6t52049s0y2gm73ezpsyul8sp3nkkj";
 
 
@@ -302,7 +306,7 @@ const autoMintHandler = function (req, res) {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (utxo.value === 25000000) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
@@ -445,7 +449,7 @@ const fuseHandler = function () {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === 25000000) {
+                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === tokenPrice) {
                         // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
