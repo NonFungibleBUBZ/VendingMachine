@@ -3,8 +3,7 @@ const { cardanocliJs } = require( "../utils/cardano" );
 const { fuseHandler } = require('../mint/controllers/autoMint')
 
 let create = async function () {
-    console.log(cardanocliJs.wallet('fuseWallet').paymentAddr)
-    console.log(cardanocliJs.wallet('testWallet').paymentAddr)
+
 }
 
 try {

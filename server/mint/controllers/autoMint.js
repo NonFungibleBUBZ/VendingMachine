@@ -21,6 +21,7 @@ if (getEnv() === "testnet") { // the server runs on two enviroments test and pro
 let utxos = {};
 let mints = [];
 let refunds = [];
+let isCharityDrop = false;
 
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
@@ -51,6 +52,7 @@ function getRandomInt(min, max) {
         max - min)) + min;
 }
 
+
 // this method is reponsible for calling the createTxOut method based on enviroment
 const createTxOut = function (addressToSend, ASSET_ID, value) {
     if (getEnv() === "testnet") {
@@ -80,22 +82,18 @@ const createFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
 // production transaction build
 const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
 
-    let valorAtual = value; // currentValue declaration thats what you going to receive at the end
+    let currentValue = value; // currentValue declaration thats what you going to receive at the end
 
     const clientValue = cardanocliJs.toLovelace(1.5); // the minimun value to send along with the token
     const disposalValue = cardanocliJs.toLovelace(1.5);
 
-    valorAtual -= clientValue + disposalValue;
-
-    const secondValue = Math.floor(0.4 * valorAtual); // 40% to the second wallet
-
-    valorAtual -= secondValue;
+    currentValue -= clientValue + disposalValue;
 
     const valorRovaris = cardanocliJs.toLovelace(1); // 1 ada to the dev
 
-    valorAtual -= valorRovaris; // to remove my part you should remove this
+    currentValue -= valorRovaris; // to remove my part you should remove this
 
-    const firstValue = valorAtual; // the remaining for you
+    const firstValue = currentValue; // the remaining for you
 
     let txOutArray = [
         {
@@ -103,15 +101,9 @@ const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
             value: { lovelace: firstValue },
         },
         {
-            address: secondWallet,
-            value: { lovelace: secondValue },
-        },
-
-        {
             address: devWallet,
             value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
         },
-
         {
             address: addressToSend,
             value: {
@@ -140,24 +132,24 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
 
     const carteiraQuatro = getFakeWalletById(4).paymentAddr;
 
-    let valorAtual = value;
+    let currentValue = value;
 
     const valorUm = cardanocliJs.toLovelace(1);
 
-    valorAtual -= valorUm;
+    currentValue -= valorUm;
 
     const clientValue = cardanocliJs.toLovelace(1.5);
 
     const disposalValue = cardanocliJs.toLovelace(1.5);
 
-    valorAtual -= clientValue;
-    valorAtual -= disposalValue;
+    currentValue -= clientValue;
+    currentValue -= disposalValue;
 
-    const valorDois = Math.floor(0.25 * valorAtual);
+    const valorDois = Math.floor(0.25 * currentValue);
 
-    valorAtual -= valorDois;
+    currentValue -= valorDois;
 
-    const valorTres = valorAtual;
+    const valorTres = currentValue;
 
     let txOutArray = [
         {
@@ -193,71 +185,95 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
 };
 const prodTxOut = function (addressToSend, ASSET_ID, value) {
 
-    let valorAtual = value; // currentValue declaration thats what you going to receive at the end
+    let currentValue = value; // currentValue declaration thats what you going to receive at the end
 
     const clientValue = cardanocliJs.toLovelace(1.5); // the minimun value to send along with the token
 
-    valorAtual -= clientValue;
+    currentValue -= clientValue;
 
-    const secondValue = Math.floor(0.4 * valorAtual); // 40% to the second wallet
+    const secondValue = Math.floor(0.4 * currentValue); // 40% to the second wallet
 
-    valorAtual -= secondValue;
+    currentValue -= secondValue;
 
     const valorRovaris = cardanocliJs.toLovelace(1); // 1 ada to the dev
 
-    valorAtual -= valorRovaris; // to remove my part you should remove this
+    currentValue -= valorRovaris; // to remove my part you should remove this
 
-    const firstValue = valorAtual; // the remaining for you
+    const firstValue = currentValue; // the remaining for you
 
-    let txOutArray = [
-        {
-            address: firstWallet,
-            value: { lovelace: firstValue },
-        },
-        {
-            address: secondWallet,
-            value: { lovelace: secondValue },
-        },
+    let txOutArray = []
 
-        {
-            address: devWallet,
-            value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
-        },
-
-        {
-            address: addressToSend,
-            value: {
-                lovelace: clientValue,
-                [ASSET_ID]: 1,
+    if (isCharityDrop) {
+        txOutArray = [
+            {
+                address: firstWallet,
+                value: { lovelace: firstValue },
             },
-        },
-    ];
+            {
+                address: secondWallet,
+                value: { lovelace: secondValue },
+            },
+
+            {
+                address: devWallet,
+                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
+            },
+
+            {
+                address: addressToSend,
+                value: {
+                    lovelace: clientValue,
+                    [ASSET_ID]: 1,
+                },
+            },
+        ];
+    } else {
+         txOutArray = [
+            {
+                address: firstWallet,
+                value: { lovelace: firstValue + secondValue },
+            },
+            {
+                address: devWallet,
+                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
+            },
+
+            {
+                address: addressToSend,
+                value: {
+                    lovelace: clientValue,
+                    [ASSET_ID]: 1,
+                },
+            },
+        ];
+    }
+
 
     return txOutArray;
 };
 
-const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, you shouldn't care much fro this, will be used fro test purposes only, but is the same transaction as the prod above
+const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, you shouldn't care much for this, will be used for test purposes only, but is the same transaction as the prod above
     const carteiraUm = getFakeWalletById(1).paymentAddr;
 
     const carteiraDois = getFakeWalletById(2).paymentAddr;
 
     const carteiraTres = getFakeWalletById(3).paymentAddr;
 
-    let valorAtual = value;
+    let currentValue = value;
 
     const valorUm = cardanocliJs.toLovelace(1);
 
-    valorAtual -= valorUm;
+    currentValue -= valorUm;
 
     const clientValue = cardanocliJs.toLovelace(1.5);
 
-    valorAtual -= clientValue;
+    currentValue -= clientValue;
 
-    const valorDois = Math.floor(0.25 * valorAtual);
+    const valorDois = Math.floor(0.25 * currentValue);
 
-    valorAtual -= valorDois;
+    currentValue -= valorDois;
 
-    const valorTres = valorAtual;
+    const valorTres = currentValue;
 
     let txOutArray = [
         {

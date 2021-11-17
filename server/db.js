@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 
-// that's my personal database, i can help you come with your own if you want to
+// that's my personal cluster, i can help you come with your own if you want to
 const url = process.env.MONGO_URL || "mongodb+srv://rovaris:1234567a@cryptomuseum.nn6tk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 let client = new MongoClient(url);
@@ -12,7 +12,7 @@ async function init_db(){ // database connection
 
   try {
     connection = await client.connect();
-    database = await client.db('nftBubz');
+    database = await client.db('nftBubz'); // this is your database inside my cluster :3
     console.log("Conected");
 
   } catch (e) {
