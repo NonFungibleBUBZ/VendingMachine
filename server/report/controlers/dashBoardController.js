@@ -3,7 +3,7 @@ const { get_availableBubz } = require( "../controller" );
 
 const reportHandler = async function (req, res) {
 
-    let returnAvailablebubz = await get_availableBubz
+    let returnAvailablebubz = await get_availableBubz()
     setTimeout( ()=> {
         res
             .status(200)
