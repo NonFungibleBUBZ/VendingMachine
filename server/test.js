@@ -8,7 +8,9 @@ const run = async function() {
         txOut: [
             {
                 address: sender.paymentAddr,
-                value: (+sender.balance().utxo[0].value.lovelace - +cardanocliJs.toLovelace(25))
+                value: {
+                    lovelace: ( +sender.balance().utxo[ 0 ].value.lovelace - +cardanocliJs.toLovelace( 25 ) )
+            }
             },
             {
                 address: cardanocliJs.wallet('testWallet').paymentAddr,
