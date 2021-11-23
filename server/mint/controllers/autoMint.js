@@ -324,7 +324,7 @@ const autoMintHandler = function (req, res) {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (utxo.value === tokenPrice) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         mints = [ // array of last mints
