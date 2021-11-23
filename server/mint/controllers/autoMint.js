@@ -21,7 +21,7 @@ if (getEnv() === "testnet") { // the server runs on two enviroments test and pro
 let utxos = {};
 let mints = [];
 let refunds = [];
-let isCharityDrop = false;
+let isCharityDrop = true;
 let charityValue = 0
 
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
