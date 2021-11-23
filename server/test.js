@@ -21,7 +21,7 @@ const run = async function() {
         ],
     };
 
-    console.log(JSON.stringify(txInfo, null, 2))
+    console.log(JSON.stringify(sender.balance(), null, 2))
 
     const raw = cardanocliJs.transactionBuildRaw(txInfo);
 
