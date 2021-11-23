@@ -4,6 +4,6 @@ const run = async function() {
     console.log(cardanocliJs.wallet('fake-wallet-0').balance())
 }
 
-
+run()
 
 module.exports = {run}
