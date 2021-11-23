@@ -4,11 +4,11 @@ const run = async function() {
     const sender = cardanocliJs.wallet('fake-wallet-0');
 
     const txInfo = {
-        txIn: sender.balance()[0],
+        txIn: sender.balance().utxo[0],
         txOut: [
             {
                 address: sender.paymentAddr,
-                value: sender.balance()[0] - cardanocliJs.toLovelace(25)
+                value: sender.balance().utxo[0] - cardanocliJs.toLovelace(25)
             },
             {
                 address: cardanocliJs.wallet('testWallet').paymentAddr,
