@@ -93,7 +93,7 @@ async function update_collection(name, fee, isDonation, donationValue) {
             let ValueSentOut = 1.5;
             thisCollection.valueSentOut += ValueSentOut
             let ValueSentDeveloper = 1;
-            thisCollection.ValueSentDeveloper = ValueSentDeveloper
+            thisCollection.ValueSentDeveloper += ValueSentDeveloper
             let nftDroped = thisCollection.allBubz.filter(bubz => bubz.available !== true)
             thisCollection.nftDroped = nftDroped
             thisCollection.totalMintingCost += fee
