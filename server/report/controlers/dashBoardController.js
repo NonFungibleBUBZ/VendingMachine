@@ -1,13 +1,14 @@
 const { get_availableBubz } = require( "../controller" );
+const { get_collection } = require( "../../mint/db" );
 
 
 const reportHandler = async function (req, res) {
 
-    let returnAvailablebubz = await get_availableBubz()
+    let collections = await get_collection()
     setTimeout( ()=> {
         res
             .status(200)
-            .json({ message: "report test", data: returnAvailablebubz});
+            .json({ message: "Success", data: collections});
     },0)
 }
 

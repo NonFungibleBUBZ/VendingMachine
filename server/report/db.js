@@ -23,18 +23,16 @@ async function get_availableBubz() {
     return db_entries; // then returns the availableBubz
 }
 
-async function get_collection(collection) {
+async function get_collections() {
     let db_conn = await db_utils.get_db(); // connects to the db
 
     let db_entries = await db_conn.collection("collections").find({}).toArray(); // gets all the collections
 
-    db_entries = db_entries.find(collection => collection.name === collection) // looks for the desired collection (inputed as a parameter)
-
-    cache.set(collection, db_entries); // updates the server cache with the key of the collection
+    cache.set('collections', db_entries); // updates the server cache with the key of the collection
 
     return db_entries;
 }
 
 
 
-module.exports = { get_availableBubz, get_collection };
+module.exports = { get_availableBubz, get_collections };
