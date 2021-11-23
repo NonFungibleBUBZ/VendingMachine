@@ -92,14 +92,14 @@ async function update_collection(name, fee, isDonation, donationValue) {
             console.log(thisCollection)
             let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true) // availableBubz receive an filtered array of allBubz removing the unavailable ones
             let ValueCollected = 25;
-            thisCollection.totalValueCollected += ValueCollected
+            thisCollection.totalValueCollected = ValueCollected
             let ValueSentOut = 1.5;
-            thisCollection.valueSentOut += ValueSentOut
+            thisCollection.valueSentOut = ValueSentOut
             let ValueSentDeveloper = 1;
             thisCollection.ValueSentDeveloper += ValueSentDeveloper
             let nftDroped = thisCollection.allBubz.filter(bubz => bubz.available !== true)
             thisCollection.nftDroped = nftDroped
-            thisCollection.totalMintingCost += fee
+            thisCollection.totalMintingCost = fee
             if(isDonation) {
                 thisCollection['totalSentDonation'] = donationValue
             }
