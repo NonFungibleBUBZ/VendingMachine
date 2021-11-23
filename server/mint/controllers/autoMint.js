@@ -336,6 +336,7 @@ const autoMintHandler = function (req, res) {
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
+                        console.log('refund?')
                         const refundValue = utxo.value.lovelace;
 
                         refunds = [
@@ -407,6 +408,7 @@ const mint = function (receiver, utxo, _metadata, index) {
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
+    console.log(txHash)
 
     if (txHash) { // if the transaction ocurred without error then it sets the bub unavailable
         console.log('aaaaaa')
