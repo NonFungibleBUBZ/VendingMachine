@@ -69,6 +69,7 @@ async function set_unavailable(index, name, fee, isDonation, donationValue) {
             });                 // replace the current first collection in the database with the updated collection
 
             setTimeout( async ()=> {
+                console.log('bbbbbbbbbbb')
               await update_collection(name, fee, isDonation, donationValue) // on the next tick of the clock (since the last call had await, this only happens after the database update
                                             // it then calls the update_collection method
             },0)
@@ -83,11 +84,12 @@ async function update_collection(name, fee, isDonation, donationValue) {
     let updatedCollection
     let allCollections = await db_conn.collection("collections").find({}).toArray(); // all collections
 
+    console.log('cccccccccccccccccc')
     setTimeout( async () => {
         thisCollection = allCollections.find(_collection_id => _collection_id.name === name) // desired collection
-
+        console.log(thisCollection)
         if (thisCollection) { // if found the desired collection
-
+            console.log(thisCollection)
             let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true) // availableBubz receive an filtered array of allBubz removing the unavailable ones
             let ValueCollected = 25;
             thisCollection['totalValueCollected'] += ValueCollected

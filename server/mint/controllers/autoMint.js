@@ -409,6 +409,7 @@ const mint = function (receiver, utxo, _metadata, index) {
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
 
     if (txHash) { // if the transaction ocurred without error then it sets the bub unavailable
+        console.log('aaaaaa')
         set_unavailable(index, 'firstCollection', fee, isCharityDrop, charityValue).then( ()=> {
         })
     }
