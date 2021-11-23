@@ -9,12 +9,12 @@ async function get_collections() {
 
 
 // those 3 methods are just directly asynchronous calls of the db methods
-async function set_unavailable(index) {
-    return await db.set_unavailable(index, 'firstCollection') // notice that i've made those methods in a call that's easy to come up with a new collection,
+async function set_unavailable(index, collection, fee, isDonation, donationValue) {
+    return await db.set_unavailable(index, collection, fee, isDonation, donationValue) // notice that i've made those methods in a call that's easy to come up with a new collection,
                                                                     // you wouldn't need to create new db methods or anything like that
 }
-async function update_collection() {
-    return await db.update_collection('firstCollection')
+async function update_collection(collection, fee, isDonation, donationValue) {
+    return await db.update_collection(collection, fee, isDonation, donationValue)
 }
 async function get_availableBubz() {
     return await db.get_availableBubz()

@@ -46,7 +46,7 @@ async function register_collection(collectionObj) {
 }
 
 // this method is responsible for setting an Bub unavailable after mint, it takes as parameter the index of the bub (note that index = number -1 ex: SuperC1234.index == 1233)
-async function set_unavailable(index, name) {
+async function set_unavailable(index, name, fee, isDonation, donationValue) {
 
     let db_conn = await db_utils.get_db(); // db connection
     let updatedCollection // variables declarations
@@ -69,7 +69,7 @@ async function set_unavailable(index, name) {
             });                 // replace the current first collection in the database with the updated collection
 
             setTimeout( async ()=> {
-              await update_collection(name) // on the next tick of the clock (since the last call had await, this only happens after the database update
+              await update_collection(name, fee, isDonation, donationValue) // on the next tick of the clock (since the last call had await, this only happens after the database update
                                             // it then calls the update_collection method
             },0)
         }
@@ -77,7 +77,7 @@ async function set_unavailable(index, name) {
 }
 
 // this method going to be called after a mint also, is responsible from removing the unavailable bub from the array of available bubz
-async function update_collection(name) {
+async function update_collection(name, fee, isDonation, donationValue) {
     let db_conn = await db_utils.get_db(); // db connection
     let thisCollection // variables declarations
     let updatedCollection
@@ -89,10 +89,21 @@ async function update_collection(name) {
         if (thisCollection) { // if found the desired collection
 
             let availableBubz = thisCollection.allBubz.filter(bubz => bubz.available === true) // availableBubz receive an filtered array of allBubz removing the unavailable ones
-                                                                                                // note that in that way, we still got all the bubz in the database, but the system only mints from the
+            let ValueCollected = 25;
+            thisCollection['totalValueCollected'] += ValueCollected
+            let ValueSentOut = 1.5;
+            thisCollection['valueSentOut'] += ValueSentOut
+            let ValueSentDeveloper = 1;
+            thisCollection['ValueSentDeveloper'] += ValueSentDeveloper
+            let nftDroped = thisCollection.allBubz.filter(bubz => bubz.available !== true)
+            thisCollection['nftDroped'] = nftDroped
+            thisCollection['totalMintingCost'] += fee
+            if(isDonation) {
+                thisCollection['totalSentDonation'] += donationValue
+            }
+                                                                             // note that in that way, we still got all the bubz in the database, but the system only mints from the
                                                                                                 // available bubz array
-
-            thisCollection.availableBubz = availableBubz
+            thisCollection['availableBubz'] = availableBubz
 
             updatedCollection = await db_conn.collection("collections").replaceOne({_id: new ObjectId(thisCollection._id)}, thisCollection, {
                 w: "majority",

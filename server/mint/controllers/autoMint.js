@@ -22,6 +22,7 @@ let utxos = {};
 let mints = [];
 let refunds = [];
 let isCharityDrop = false;
+let charityValue = 0
 
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
@@ -204,6 +205,7 @@ const prodTxOut = function (addressToSend, ASSET_ID, value) {
     let txOutArray = []
 
     if (isCharityDrop) {
+        charityValue = (secondValue / 1000000)
         txOutArray = [
             {
                 address: firstWallet,
@@ -407,7 +409,7 @@ const mint = function (receiver, utxo, _metadata, index) {
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
 
     if (txHash) { // if the transaction ocurred without error then it sets the bub unavailable
-        set_unavailable(index).then( ()=> {
+        set_unavailable(index, 'firstCollection', fee, isCharityDrop, charityValue).then( ()=> {
         })
     }
 };
