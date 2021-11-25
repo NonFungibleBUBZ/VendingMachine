@@ -1,0 +1,24 @@
+<div class="" style="font-size: 18px" (click)="router.navigate(['../'])">
+  <div class="col" style="margin-top: 200px">
+    <table class="table table-dark table-striped">
+      <thead>
+      <tr>
+        <th scope="col">total value collected: {{ data.totalValueCollected }} ADA</th>
+        <th scope="col">total minting cost: {{ data.totalMintingCost }} lovelace</th>
+        <th scope="col">value sent out: {{ data.valueSentOut }} ADA</th>
+        <th scope="col">value sent developer: {{ data.ValueSentDeveloper }} ADA</th>
+        <th scope="col">total sent donation: {{ data.totalSentDonation }} ADA</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">last minted: {{ data.lastMinted.name }}</th>
+        <td>nft droped: {{ data.nftDroped.length }} = {{ ((data.nftDroped.length * 100) / data.allBubz.length).toFixed(1) }}%</td>
+        <td>nfts availables : {{ data.availableBubz.length }} = {{ ((data.availableBubz.length * 100) / data.allBubz.length).toFixed(1) }}%</td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
