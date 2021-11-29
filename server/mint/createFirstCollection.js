@@ -8,6 +8,20 @@ const db_utils = require('../db.js');
 
 let create = async function () {
 
+
+}
+
+try {
+    create().then( () => {
+
+    })
+} catch (err) {
+    console.log(err)
+}
+
+
+
+/*
     let db_conn = await db_utils.get_db(); // db connection
 
     let allCollections = await db_conn.collection("collections").find({}).toArray(); // getting all the collections
@@ -40,12 +54,4 @@ let create = async function () {
 
         }
     }, 0)
-}
-
-try {
-    create().then( () => {
-
-    })
-} catch (err) {
-    console.log(err)
-}
+*/
