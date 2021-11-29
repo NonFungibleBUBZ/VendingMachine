@@ -15,7 +15,7 @@ let fuseWallet = cardanocliJs.wallet("fuseWallet");
 if (getEnv() === "testnet") { // the server runs on two enviroments test and prod, in the main server folder you should run like "npm start test"
     wallet = cardanocliJs.wallet("testWallet"); // testNet wallet there's not much to explain
 } else {
-    wallet = cardanocliJs.wallet(""); // your wallet, right now 11/14/21 you still didn't sent me your wallet files (i don't even know if it's possible...)
+    wallet = cardanocliJs.wallet("dropWallet"); // your wallet, right now 11/14/21 you still didn't sent me your wallet files (i don't even know if it's possible...)
 }
 
 // some variables declarations, we're going to need those later
