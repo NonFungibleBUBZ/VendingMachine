@@ -4,6 +4,7 @@ const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
 const metadataArray = require('../metadata/metadata_first_collection')
 const { get_collections, update_collection, set_unavailable, get_availableBubz } = require('../controller')
+const { MaintenanceObj } = require('maintenance/controller')
 
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
@@ -21,12 +22,16 @@ if (getEnv() === "testnet") { // the server runs on two enviroments test and pro
 let utxos = {};
 let mints = [];
 let refunds = [];
-let isCharityDrop = true;
+let isCharityDrop = MaintenanceObj.isCharity;
 let charityValue = 0
 
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
-let tokenPrice = 25000000
+let tokenPrice = MaintenanceObj.tokenPrice
+let fusePrice = MaintenanceObj.fusionPrice
+
+
+console.log(tokenPrice, fusePrice, isCharityDrop)
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
 const mintScript = {
@@ -36,10 +41,10 @@ const mintScript = {
 const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript); // note the mintScript being passed as parameter
 
 const firstWallet = // this should be your personal wallet to receive funds
-    "";
+    MaintenanceObj.dropWallet;
 
 const secondWallet = // this should be the wallet of the charity project
-    "";
+    MaintenanceObj.charityWallet;
 
 const devWallet = // and this is my wallet considered leaving it here, i've commented every script with detailed instructions, and i've made the server easy for you :3
     "addr1qxcd03zuth7gjlxwsgswfzm0tvk2x9z9ghgeljq6xt89hynfxr35pxlj7p3c8kv7w3ue6t52049s0y2gm73ezpsyul8sp3nkkj";
@@ -470,7 +475,7 @@ const fuseHandler = function () {
 
                 setTimeout( ()=> { // after that runs bellow
 
-                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === tokenPrice) {
+                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
                         // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
