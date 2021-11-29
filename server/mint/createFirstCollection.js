@@ -1,10 +1,10 @@
 // don't mind this script i used it multiple times to do multiple tests
-const { cardanocliJs } = require( "../utils/cardano" );
-const { fuseHandler } = require('../mint/controllers/autoMint')
+
+
+
+
 const ObjectId = require('mongodb').ObjectId;
 const db_utils = require('../db.js');
-const cache = require('../memoryCache');
-const { db } = require('./db')
 
 let create = async function () {
 
