@@ -4,7 +4,7 @@ const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
 const metadataArray = require('../metadata/metadata_first_collection')
 const { get_collections, update_collection, set_unavailable, get_availableBubz } = require('../controller')
-const { MaintenanceObj } = require('maintenance/controller')
+const { MaintenanceObj } = require('../../maintenance/controller')
 
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
