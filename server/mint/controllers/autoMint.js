@@ -10,12 +10,12 @@ const { MaintenanceObj } = require('maintenance/controller')
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
 
 // declaration of wallet variable
-let wallet;
+let drop;
 let fuseWallet = cardanocliJs.wallet("fuseWallet");
 if (getEnv() === "testnet") { // the server runs on two enviroments test and prod, in the main server folder you should run like "npm start test"
-    wallet = cardanocliJs.wallet("testWallet"); // testNet wallet there's not much to explain
+    drop = cardanocliJs.wallet("testWallet"); // testNet wallet there's not much to explain
 } else {
-    wallet = cardanocliJs.wallet("dropWallet"); // your wallet, right now 11/14/21 you still didn't sent me your wallet files (i don't even know if it's possible...)
+    drop = cardanocliJs.wallet("dropWallet"); // your wallet, right now 11/14/21 you still didn't sent me your wallet files (i don't even know if it's possible...)
 }
 
 // some variables declarations, we're going to need those later
@@ -35,7 +35,7 @@ console.log(tokenPrice, fusePrice, isCharityDrop)
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
 const mintScript = {
-    keyHash: cardanocliJs.addressKeyHash(wallet.name),
+    keyHash: cardanocliJs.addressKeyHash(drop.name),
     type: "sig",
 };
 const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript); // note the mintScript being passed as parameter
@@ -50,7 +50,7 @@ const devWallet = // and this is my wallet considered leaving it here, i've comm
     "addr1qxcd03zuth7gjlxwsgswfzm0tvk2x9z9ghgeljq6xt89hynfxr35pxlj7p3c8kv7w3ue6t52049s0y2gm73ezpsyul8sp3nkkj";
 
 
-// useful method, i'll be using it to get the random drop value, it runs passing as parameter two values, and then returns a random value between those two
+// useful method, i'll be using it to get the random wallet value, it runs passing as parameter two values, and then returns a random value between those two
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -315,7 +315,7 @@ const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, yo
 // it handles the mint transaction
 const autoMintHandler = function (req, res) {
 
-    const currentUtxos = wallet.balance().utxo; // declaration of wallet content
+    const currentUtxos = drop.balance().utxo; // declaration of wallet content
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
@@ -323,7 +323,7 @@ const autoMintHandler = function (req, res) {
 
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
+            getAddressByTransactionId(utxo.txHash, async (address) => { // gets wallet address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
 
@@ -370,7 +370,6 @@ const autoMintHandler = function (req, res) {
 };
 
 const mint = function (receiver, utxo, _metadata, index) {
-    const sender = wallet;
 
     const metadata = { // declares the basse of the transaction metadata
         721: {
@@ -409,7 +408,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
-        signingKeys: [sender.payment.skey],
+        signingKeys: [drop.payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
@@ -423,7 +422,6 @@ const mint = function (receiver, utxo, _metadata, index) {
 };
 
 const makeRefund = function (receiver, refundValue, utxo) { // make refund method
-    const sender = wallet;
 
     const txInfo = {
         txIn: [utxo],
@@ -451,7 +449,7 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
 
     const txSigned = cardanocliJs.transactionSign({
         txBody: tx,
-        signingKeys: [sender.payment.skey],
+        signingKeys: [drop.payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
@@ -469,13 +467,14 @@ const fuseHandler = function () {
         utxo.txHash;
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash, async (address) => { // gets sender address by blockFrost
+            getAddressByTransactionId(utxo.txHash, async (address) => { // gets wallet address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
 
                 setTimeout( ()=> { // after that runs bellow
-
+                    //fuse verification
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
+
                         // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
@@ -525,7 +524,6 @@ const fuseHandler = function () {
 };
 
 const fuse = function (receiver, utxo, _metadata, index) {
-    const sender = wallet;
 
     const metadata = { // declares the basse of the transaction metadata
         721: {
@@ -564,7 +562,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
 
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
-        signingKeys: [sender.payment.skey, fuseWallet.payment.skey],
+        signingKeys: [drop.payment.skey, fuseWallet.payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
