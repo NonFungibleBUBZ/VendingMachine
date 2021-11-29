@@ -1,13 +1,9 @@
 // don't mind this script i used it multiple times to do multiple tests
 
-
-
-
 const ObjectId = require('mongodb').ObjectId;
 const db_utils = require('../db.js');
 
 let create = async function () {
-
 
 }
 

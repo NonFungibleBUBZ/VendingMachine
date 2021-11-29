@@ -455,7 +455,7 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
     const txHash = cardanocliJs.transactionSubmit(txSigned);
 };
 
-const fuseHandler = function () {
+const fuseHandler = function (req, res) {
 
     const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
