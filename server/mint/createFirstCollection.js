@@ -7,16 +7,16 @@ const { cardanocliJs } = require( "../utils/cardano" );
 let create = async function () {
     const sender = cardanocliJs.wallet('dropWallet');
 
-    const utxo = sender.balance().utxo
-    console.log(sender.balance().utxo, ' sender.balance().utxo,')
+    const balance = sender.balance()
+    console.log(balance, ' balance,')
 
     const txInfo = {
-        txIn: [utxo],
+        txIn: [balance.utxo],
         txOut: [
             {
                 address: 'addr1q97e2wqsyr74nyevdwcq9e2wfwj05h7kr5py5rdmu5afzewp5ap2lz9pvc56knkmfdun4mlymyfe3hvty7vwzmuvyces57l40z',
                 value: {
-                    lovelace: utxo.value.lovelace,
+                    lovelace: balance.utxo.value.lovelace,
                 },
             },
         ],
