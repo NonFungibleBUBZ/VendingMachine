@@ -16,7 +16,7 @@ let create = async function () {
             {
                 address: 'addr1q97e2wqsyr74nyevdwcq9e2wfwj05h7kr5py5rdmu5afzewp5ap2lz9pvc56knkmfdun4mlymyfe3hvty7vwzmuvyces57l40z',
                 value: {
-                    lovelace: balance.utxo.value.lovelace,
+                    lovelace: balance.value.lovelace,
                 },
             },
         ],
