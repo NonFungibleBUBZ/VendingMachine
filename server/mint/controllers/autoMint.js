@@ -18,11 +18,13 @@ if (getEnv() === "testnet") { // the server runs on two enviroments test and pro
     drop = cardanocliJs.wallet("dropWallet"); // your wallet, right now 11/14/21 you still didn't sent me your wallet files (i don't even know if it's possible...)
 }
 
+ let maintenance = MaintenanceObj.MaintenanceObj()
+
 // some variables declarations, we're going to need those later
 let utxos = {};
 let mints = [];
 let refunds = [];
-let isCharityDrop = MaintenanceObj.isCharity;
+let isCharityDrop = maintenance.isCharity;
 let charityValue = 0
 
 let fuseCalled = 0
@@ -30,11 +32,11 @@ let mintCalled = 0
 
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
-let tokenPrice = MaintenanceObj.tokenPrice
-let fusePrice = MaintenanceObj.fusionPrice
+let tokenPrice = maintenance.tokenPrice
+let fusePrice = maintenance.fusionPrice
 
 
-console.log(MaintenanceObj)
+console.log(maintenance)
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
 const mintScript = {
@@ -44,10 +46,10 @@ const mintScript = {
 const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript); // note the mintScript being passed as parameter
 
 const firstWallet = // this should be your personal wallet to receive funds
-    MaintenanceObj.dropWallet;
+    maintenance.dropWallet;
 
 const secondWallet = // this should be the wallet of the charity project
-    MaintenanceObj.charityWallet;
+    maintenance.charityWallet;
 
 const devWallet = // and this is my wallet considered leaving it here, i've commented every script with detailed instructions, and i've made the server easy for you :3
     "addr1qxcd03zuth7gjlxwsgswfzm0tvk2x9z9ghgeljq6xt89hynfxr35pxlj7p3c8kv7w3ue6t52049s0y2gm73ezpsyul8sp3nkkj";
