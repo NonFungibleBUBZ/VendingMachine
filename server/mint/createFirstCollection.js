@@ -4,42 +4,16 @@ const ObjectId = require('mongodb').ObjectId;
 const db_utils = require('../db.js');
 const { cardanocliJs } = require( "../utils/cardano" );
 
+let drop = cardanocliJs.wallet('dropWallet')
+
 let create = async function () {
-    const sender = cardanocliJs.wallet('dropWallet');
-
-    const balance = sender.balance()
-    console.log(balance, ' balance,')
-
-    const txInfo = {
-        txIn: [balance.utxo[0]],
-        txOut: [
-            {
-                address: 'addr1q97e2wqsyr74nyevdwcq9e2wfwj05h7kr5py5rdmu5afzewp5ap2lz9pvc56knkmfdun4mlymyfe3hvty7vwzmuvyces57l40z',
-                value: {
-                    lovelace: balance.value.lovelace,
-                },
-            },
-        ],
+    const mintScript = {
+        keyHash: cardanocliJs.addressKeyHash(drop.name),
+        type: "sig",
     };
 
-    const raw = cardanocliJs.transactionBuildRaw(txInfo);
 
-    const fee = cardanocliJs.transactionCalculateMinFee({
-        ...txInfo,
-        txBody: raw,
-        witnessCount: 1,
-    });
-
-    txInfo.txOut[0].value.lovelace -= fee;
-
-    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
-
-    const txSigned = cardanocliJs.transactionSign({
-        txBody: tx,
-        signingKeys: [sender.payment.skey],
-    });
-
-    const txHash = cardanocliJs.transactionSubmit(txSigned);
+    console.log(JSON.stringify(mintScript,null,2))
 }
 
 try {
