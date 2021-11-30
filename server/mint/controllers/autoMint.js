@@ -357,6 +357,8 @@ const autoMintHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
+                        console.log(refunds)
+
                         makeRefund(address, refundValue, utxo);
 
                         utxos[utxo.txHash] = false;
@@ -431,6 +433,8 @@ const mint = function (receiver, utxo, _metadata, index) {
 
 const makeRefund = function (receiver, refundValue, utxo) { // make refund method
 
+    console.log(utxo)
+
     const txInfo = {
         txIn: [utxo],
         txOut: [
@@ -442,6 +446,8 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
             },
         ],
     };
+
+    console.log(JSON.stringify(MaintenanceObj, 0 ,2))
 
     const raw = cardanocliJs.transactionBuildRaw(txInfo);
 
