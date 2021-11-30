@@ -11,7 +11,7 @@ let create = async function () {
     console.log(balance, ' balance,')
 
     const txInfo = {
-        txIn: [balance.utxo],
+        txIn: [balance.utxo[0]],
         txOut: [
             {
                 address: 'addr1q97e2wqsyr74nyevdwcq9e2wfwj05h7kr5py5rdmu5afzewp5ap2lz9pvc56knkmfdun4mlymyfe3hvty7vwzmuvyces57l40z',
