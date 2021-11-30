@@ -324,6 +324,7 @@ const autoMintHandler = function (req, res) {
     console.log(mintCalled)
 
     const currentUtxos = drop.balance().utxo; // declaration of wallet content
+    console.log(currentUtxos, ' utxo drop')
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
@@ -357,13 +358,10 @@ const autoMintHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        console.log(refunds)
-
                         makeRefund(address, refundValue, utxo);
 
                         utxos[utxo.txHash] = false;
 
-                        console.table(refunds);
                     }
 
                 },0)
@@ -422,10 +420,9 @@ const mint = function (receiver, utxo, _metadata, index) {
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
-    console.log(txHash)
+
 
     if (txHash) { // if the transaction ocurred without error then it sets the bub unavailable
-        console.log('aaaaaa')
         set_unavailable(index, 'firstCollection', fee, isCharityDrop, charityValue).then( ()=> {
         })
     }
@@ -433,7 +430,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
 const makeRefund = function (receiver, refundValue, utxo) { // make refund method
 
-    console.log(utxo)
+
 
     const txInfo = {
         txIn: [utxo],
@@ -447,7 +444,7 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
         ],
     };
 
-    console.log(JSON.stringify(MaintenanceObj, 0 ,2))
+
 
     const raw = cardanocliJs.transactionBuildRaw(txInfo);
 
@@ -467,6 +464,7 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
+    console.log(txHash)
 };
 
 const fuseHandler = function (req, res) {
