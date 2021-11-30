@@ -4,13 +4,15 @@ const { getEnv } = require("../utils/getEnv");
 
 const { cardanocliJs } = require("../utils/cardano");
 
-let wallet;
+let fuseWallet;
+let dropWallet;
 
 if (getEnv() === "testnet") {
     // input of wallet, TODO make it trough controller
-    wallet = cardanocliJs.wallet("testWallet");
+    fuseWallet = cardanocliJs.wallet("testWallet");
 } else {
-    wallet = cardanocliJs.wallet("dropWallet");
+    fuseWallet = cardanocliJs.wallet('fuseWallet')
+    dropWallet = cardanocliJs.wallet("dropWallet");
 }
 
 let utxos = {};
@@ -36,7 +38,7 @@ const getProjectId = function () {
     throw "enviroment not defined";
 };
 
-const getAddressByTransactionId = function (transactionId, callback) {
+const getAddressByTransactionId = function (transactionId, fuse, callback) {
     const url = `${getBaseUrl()}/${transactionId}/utxos`;
 
     https.get(
@@ -57,7 +59,11 @@ const getAddressByTransactionId = function (transactionId, callback) {
                 jsonResponse = JSON.parse(response);
 
                 var _response = jsonResponse.outputs.find((output) => {
-                    return output.address !== wallet.paymentAddr;
+                   if (fuse) {
+                       return output.address !== fuseWallet.paymentAddr
+                   } else {
+                       return output.address !== dropWallet.paymentAddr
+                   }
                 });
 
                 callback(_response.address);

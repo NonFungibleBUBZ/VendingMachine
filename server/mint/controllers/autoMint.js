@@ -332,7 +332,7 @@ const autoMintHandler = function (req, res) {
 
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash, async (address) => { // gets wallet address by blockFrost
+            getAddressByTransactionId(utxo.txHash,false, async (address) => { // gets wallet address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
 
@@ -489,7 +489,7 @@ const fuseHandler = function (req, res) {
         utxo.txHash;
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash, async (address) => { // gets wallet address by blockFrost
+            getAddressByTransactionId(utxo.txHash,true, async (address) => { // gets wallet address by blockFrost
 
                 let availableBubz = await get_availableBubz() // get the current available bubz in the database
 
