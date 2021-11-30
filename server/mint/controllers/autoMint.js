@@ -34,7 +34,7 @@ let tokenPrice = MaintenanceObj.tokenPrice
 let fusePrice = MaintenanceObj.fusionPrice
 
 
-console.log(tokenPrice, fusePrice, isCharityDrop)
+console.log(MaintenanceObj)
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
 const mintScript = {
