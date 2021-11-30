@@ -8,7 +8,7 @@ let create = async function () {
     const sender = cardanocliJs.wallet('dropWallet');
 
     const utxo = sender.balance().utxo
-    console.log(sender.balance().utxo)
+    console.log(sender.balance().utxo, ' sender.balance().utxo,')
 
     const txInfo = {
         txIn: [utxo],
