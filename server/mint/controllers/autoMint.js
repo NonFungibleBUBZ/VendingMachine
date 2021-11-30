@@ -25,6 +25,9 @@ let refunds = [];
 let isCharityDrop = MaintenanceObj.isCharity;
 let charityValue = 0
 
+let fuseCalled = 0
+let mintCalled = 0
+
 // defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
 let tokenPrice = MaintenanceObj.tokenPrice
@@ -315,6 +318,9 @@ const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, yo
 // it handles the mint transaction
 const autoMintHandler = function (req, res) {
 
+    mintCalled++
+    console.log(mintCalled)
+
     const currentUtxos = drop.balance().utxo; // declaration of wallet content
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
@@ -456,6 +462,9 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
 };
 
 const fuseHandler = function (req, res) {
+
+    fuseCalled++
+    console.log(fuseCalled)
 
     const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
 
