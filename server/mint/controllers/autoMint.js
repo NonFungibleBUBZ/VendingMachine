@@ -358,7 +358,7 @@ const autoMintHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo);
+                        makeRefund(address, refundValue, utxo, false);
 
                         utxos[utxo.txHash] = false;
 
@@ -428,9 +428,7 @@ const mint = function (receiver, utxo, _metadata, index) {
     }
 };
 
-const makeRefund = function (receiver, refundValue, utxo) { // make refund method
-
-
+const makeRefund = function (receiver, refundValue, utxo, fuse) { // make refund method
 
     const txInfo = {
         txIn: [utxo],
@@ -458,10 +456,19 @@ const makeRefund = function (receiver, refundValue, utxo) { // make refund metho
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
 
-    const txSigned = cardanocliJs.transactionSign({
-        txBody: tx,
-        signingKeys: [drop.payment.skey],
-    });
+    if (fuse) {
+        const txSigned = cardanocliJs.transactionSign({
+            txBody: tx,
+            signingKeys: [fuseWallet.payment.skey],
+        });
+    } else {
+        const txSigned = cardanocliJs.transactionSign({
+            txBody: tx,
+            signingKeys: [drop.payment.skey],
+        });
+    }
+
+
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
     console.log(txHash)
@@ -517,7 +524,7 @@ const fuseHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo);
+                        makeRefund(address, refundValue, utxo, true);
 
                         utxos[utxo.txHash] = false;
 
