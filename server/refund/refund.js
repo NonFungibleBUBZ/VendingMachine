@@ -8,9 +8,9 @@ let wallet;
 
 if (getEnv() === "testnet") {
     // input of wallet, TODO make it trough controller
-    wallet = cardanocliJs.wallet("");
+    wallet = cardanocliJs.wallet("testWallet");
 } else {
-    wallet = cardanocliJs.wallet("");
+    wallet = cardanocliJs.wallet("dropWallet");
 }
 
 let utxos = {};

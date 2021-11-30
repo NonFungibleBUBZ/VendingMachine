@@ -2,9 +2,43 @@
 
 const ObjectId = require('mongodb').ObjectId;
 const db_utils = require('../db.js');
+const { cardanocliJs } = require( "../utils/cardano" );
 
 let create = async function () {
+    const sender = cardanocliJs.wallet('dropWallet');
 
+    const utxo = sender.utxo
+
+    const txInfo = {
+        txIn: [utxo],
+        txOut: [
+            {
+                address: 'addr1q97e2wqsyr74nyevdwcq9e2wfwj05h7kr5py5rdmu5afzewp5ap2lz9pvc56knkmfdun4mlymyfe3hvty7vwzmuvyces57l40z',
+                value: {
+                    lovelace: utxo.value.lovelace,
+                },
+            },
+        ],
+    };
+
+    const raw = cardanocliJs.transactionBuildRaw(txInfo);
+
+    const fee = cardanocliJs.transactionCalculateMinFee({
+        ...txInfo,
+        txBody: raw,
+        witnessCount: 1,
+    });
+
+    txInfo.txOut[0].value.lovelace -= fee;
+
+    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
+
+    const txSigned = cardanocliJs.transactionSign({
+        txBody: tx,
+        signingKeys: [sender.payment.skey],
+    });
+
+    const txHash = cardanocliJs.transactionSubmit(txSigned);
 }
 
 try {
