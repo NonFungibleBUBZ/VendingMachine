@@ -19,16 +19,16 @@ async function get_collection() {
 
 
 // like the first method that returns all the collections, this method returns all the available bubz to mint
-async function get_availableBubz() {
+async function get_availableBubz(_collection) {
     let db_conn = await db_utils.get_db(); // connects to the db
 
     let db_entries = await db_conn.collection("collections").find({}).toArray(); // gets all the collections
 
-    db_entries = db_entries.find(collection => collection.name === 'firstCollection') // looks for the first collection
+    db_entries = db_entries.find(collection => collection.name === _collection) // looks for the first collection
 
     db_entries = db_entries.availableBubz // set the variable to what we want
 
-    cache.set("availableBubz", db_entries); // updates the server cache with the key "availableBubz"
+    cache.set("availableBubz_"+_collection, db_entries); // updates the server cache with the key "availableBubz"
 
     return db_entries; // then returns the availableBubz
 }

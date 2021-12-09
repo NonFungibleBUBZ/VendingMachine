@@ -38,7 +38,7 @@ const getProjectId = function () {
     throw "enviroment not defined";
 };
 
-const getAddressByTransactionId = function (transactionId, fuse, callback) {
+const getAddressByTransactionId = function (transactionId, walletName, callback) {
     const url = `${getBaseUrl()}/${transactionId}/utxos`;
 
     https.get(
@@ -59,11 +59,7 @@ const getAddressByTransactionId = function (transactionId, fuse, callback) {
                 jsonResponse = JSON.parse(response);
 
                 var _response = jsonResponse.outputs.find((output) => {
-                   if (fuse) {
-                       return output.address !== fuseWallet.paymentAddr
-                   } else {
-                       return output.address !== dropWallet.paymentAddr
-                   }
+                       return output.address !== cardanocliJs.wallet(walletName).paymentAddr
                 });
 
                 callback(_response.address);

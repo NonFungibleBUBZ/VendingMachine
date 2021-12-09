@@ -16,8 +16,8 @@ async function set_unavailable(index, collection, fee, isDonation, donationValue
 async function update_collection(collection, fee, isDonation, donationValue) {
     return await db.update_collection(collection, fee, isDonation, donationValue)
 }
-async function get_availableBubz() {
-    return await db.get_availableBubz()
+async function get_availableBubz(collection) {
+    return await db.get_availableBubz(collection)
 }
 
 module.exports = {  get_collections, update_collection, set_unavailable, get_availableBubz };

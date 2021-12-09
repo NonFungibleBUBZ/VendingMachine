@@ -2,12 +2,18 @@ const { getEnv } = require("../../utils/getEnv");
 const { cardanocliJs } = require("../../utils/cardano");
 const { getAddressByTransactionId } = require( "../../refund/refund" );
 const { getFakeWalletById } = require( "../../test/utils" );
-const metadataArray = require('../metadata/metadata_first_collection')
+const metadataArray = require('../metadata/metadata_firstCollection')
 const { get_collections, update_collection, set_unavailable, get_availableBubz } = require('../controller')
 const  MaintenanceObj  = require('../../maintenance/controller')
+const {promisify} = require("util");
+const readFile = promisify(require('fs').readFile)
 
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
+
+
+
+
 
 // declaration of wallet variable
 let drop;
@@ -30,7 +36,7 @@ let charityValue = 0
 let fuseCalled = 0
 let mintCalled = 0
 
-// defined this new variable based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
+// defined those new variables based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
 let tokenPrice = maintenance.tokenPrice
 let fusePrice = maintenance.fusionPrice
@@ -56,15 +62,18 @@ const devWallet = // and this is my wallet considered leaving it here, i've comm
 
 
 // useful method, i'll be using it to get the random wallet value, it runs passing as parameter two values, and then returns a random value between those two
-function getRandomInt(min, max) {
+const getRandomInt = function(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (
         max - min)) + min;
 }
+const getMetadata = async function (collectionName) {
+    const metadataArray = require(`../metadata/metadata_${collectionName}.js`)
+    return metadataArray
+}
 
-
-// this method is reponsible for calling the createTxOut method based on enviroment
+// this method is responsible for calling the createTxOut method based on enviroment
 const createTxOut = function (addressToSend, ASSET_ID, value) {
     if (getEnv() === "testnet") {
         return testTxOut(addressToSend, ASSET_ID, value);
@@ -76,7 +85,6 @@ const createTxOut = function (addressToSend, ASSET_ID, value) {
 
     throw "enviroment not defined, try: test or prod"; // simple err throw
 };
-
 const createFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
     if (getEnv() === "testnet") {
         return testFuseTxOut(addressToSend, ASSET_ID, value, oldASSET_ID);
@@ -89,8 +97,6 @@ const createFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
     throw "enviroment not defined, try: test or prod"; // simple err throw
 };
 
-
-// production transaction build
 const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
 
     let currentValue = value; // currentValue declaration thats what you going to receive at the end
@@ -133,7 +139,75 @@ const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
 
     return txOutArray;
 };
+const prodTxOut = function (addressToSend, ASSET_ID, value) {
 
+    let currentValue = value; // currentValue declaration thats what you going to receive at the end
+
+    const clientValue = cardanocliJs.toLovelace(1.5); // the minimun value to send along with the token
+
+    currentValue -= clientValue;
+
+    const secondValue = Math.floor(0.4 * currentValue); // 40% to the second wallet
+
+    currentValue -= secondValue;
+
+    const valorRovaris = cardanocliJs.toLovelace(1); // 1 ada to the dev
+
+    currentValue -= valorRovaris; // to remove my part you should remove this
+
+    const firstValue = currentValue; // the remaining for you
+
+    let txOutArray = []
+
+    if (isCharityDrop) {
+        charityValue = (secondValue / 1000000)
+        txOutArray = [
+            {
+                address: firstWallet,
+                value: { lovelace: firstValue },
+            },
+            {
+                address: secondWallet,
+                value: { lovelace: secondValue },
+            },
+
+            {
+                address: devWallet,
+                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
+            },
+
+            {
+                address: addressToSend,
+                value: {
+                    lovelace: clientValue,
+                    [ASSET_ID]: 1,
+                },
+            },
+        ];
+    } else {
+        txOutArray = [
+            {
+                address: firstWallet,
+                value: { lovelace: firstValue + secondValue },
+            },
+            {
+                address: devWallet,
+                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
+            },
+
+            {
+                address: addressToSend,
+                value: {
+                    lovelace: clientValue,
+                    [ASSET_ID]: 1,
+                },
+            },
+        ];
+    }
+
+
+    return txOutArray;
+};
 const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { // test method, you shouldn't care much fro this, will be used fro test purposes only, but is the same transaction as the prod above
     const carteiraUm = getFakeWalletById(1).paymentAddr;
 
@@ -194,76 +268,6 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
 
     return txOutArray;
 };
-const prodTxOut = function (addressToSend, ASSET_ID, value) {
-
-    let currentValue = value; // currentValue declaration thats what you going to receive at the end
-
-    const clientValue = cardanocliJs.toLovelace(1.5); // the minimun value to send along with the token
-
-    currentValue -= clientValue;
-
-    const secondValue = Math.floor(0.4 * currentValue); // 40% to the second wallet
-
-    currentValue -= secondValue;
-
-    const valorRovaris = cardanocliJs.toLovelace(1); // 1 ada to the dev
-
-    currentValue -= valorRovaris; // to remove my part you should remove this
-
-    const firstValue = currentValue; // the remaining for you
-
-    let txOutArray = []
-
-    if (isCharityDrop) {
-        charityValue = (secondValue / 1000000)
-        txOutArray = [
-            {
-                address: firstWallet,
-                value: { lovelace: firstValue },
-            },
-            {
-                address: secondWallet,
-                value: { lovelace: secondValue },
-            },
-
-            {
-                address: devWallet,
-                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
-            },
-
-            {
-                address: addressToSend,
-                value: {
-                    lovelace: clientValue,
-                    [ASSET_ID]: 1,
-                },
-            },
-        ];
-    } else {
-         txOutArray = [
-            {
-                address: firstWallet,
-                value: { lovelace: firstValue + secondValue },
-            },
-            {
-                address: devWallet,
-                value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
-            },
-
-            {
-                address: addressToSend,
-                value: {
-                    lovelace: clientValue,
-                    [ASSET_ID]: 1,
-                },
-            },
-        ];
-    }
-
-
-    return txOutArray;
-};
-
 const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, you shouldn't care much for this, will be used for test purposes only, but is the same transaction as the prod above
     const carteiraUm = getFakeWalletById(1).paymentAddr;
 
@@ -314,17 +318,25 @@ const testTxOut = function (addressToSend, ASSET_ID, value) { // test method, yo
     return txOutArray;
 };
 
+const walletPayAddr = function (walletName) {
+    return cardanocliJs.wallet(walletName).paymentAddr
+}
+
+
+
+
 
 // the method that is called from the http request
 // it works this way, the first method call, puts the info from the wallet inside an array, when it's called the second time, if there's still the value inside the array,
 // it handles the mint transaction
 const autoMintHandler = function (req, res) {
 
+
     mintCalled++
     console.log(mintCalled)
 
-    const currentUtxos = drop.balance().utxo; // declaration of wallet content
-    console.log(currentUtxos, ' utxo drop')
+    const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
+    console.log(currentUtxos)
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
@@ -332,9 +344,9 @@ const autoMintHandler = function (req, res) {
 
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash,false, async (address) => { // gets wallet address by blockFrost
+            getAddressByTransactionId(utxo.txHash,req.params.collection, async (address) => { // gets wallet address by blockFrost
 
-                let availableBubz = await get_availableBubz() // get the current available bubz in the database
+                let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
                 setTimeout( ()=> { // after that runs bellow
                     console.log(tokenPrice, utxo.value.lovelace, utxo.value.lovelace === tokenPrice)
@@ -343,10 +355,10 @@ const autoMintHandler = function (req, res) {
 
                         mints = [ // array of last mints
                             ...mints,
-                            { name: metadataArray[availableBubz[index].name], date: Date.now()},
+                            { name: getMetadata(req.params.collection)[availableBubz[index].name], date: Date.now()},
                         ];
 
-                        mint(address, utxo, metadataArray[availableBubz[index].index], index); // call the mint method
+                        mint(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -358,7 +370,7 @@ const autoMintHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo, false);
+                        makeRefund(address, refundValue, utxo, req.params.collection);
 
                         utxos[utxo.txHash] = false;
 
@@ -394,7 +406,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(25)), // create transaction out method that've created before
+        txOut: createTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(tokenPrice)), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
@@ -428,7 +440,7 @@ const mint = function (receiver, utxo, _metadata, index) {
     }
 };
 
-const makeRefund = function (receiver, refundValue, utxo, fuse) { // make refund method
+const makeRefund = function (receiver, refundValue, utxo, walletName) { // make refund method
 
     const txInfo = {
         txIn: [utxo],
@@ -456,19 +468,8 @@ const makeRefund = function (receiver, refundValue, utxo, fuse) { // make refund
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
 
-    if (fuse) {
-        const txSigned = cardanocliJs.transactionSign({
-            txBody: tx,
-            signingKeys: [fuseWallet.payment.skey],
-        });
-    } else {
-        const txSigned = cardanocliJs.transactionSign({
-            txBody: tx,
-            signingKeys: [drop.payment.skey],
-        });
-    }
 
-
+    const txSigned = cardanocliJs.transactionSign({txBody: tx, signingKeys: [walletPayAddr(walletName).payment.skey],})
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
     console.log(txHash)
@@ -510,10 +511,10 @@ const fuseHandler = function (req, res) {
 
                         mints = [ // array of last mints
                             ...mints,
-                            { name: metadataArray[availableBubz[index].name], date: Date.now()},
+                            { name: getMetadata(req.params.collection)[availableBubz[index].name], date: Date.now()},
                         ];
 
-                        fuse(address, utxo, metadataArray[availableBubz[index].index], index); // call the mint method
+                        fuse(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -524,7 +525,7 @@ const fuseHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo, true);
+                        makeRefund(address, refundValue, utxo, req.params.collection);
 
                         utxos[utxo.txHash] = false;
 
@@ -562,7 +563,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createFuseTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(25), Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        txOut: createFuseTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(fusePrice), Object.keys(utxo.value)[1]), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
@@ -595,5 +596,12 @@ const fuse = function (receiver, utxo, _metadata, index) {
     }
 };
 
+const testHandler = function (req, res) {
+    res
+        .status(200)
+        .json({ collection: req.params.collection});
+}
 
-module.exports = { autoMintHandler, fuseHandler }
+
+
+module.exports = { autoMintHandler, fuseHandler, testHandler }*/
