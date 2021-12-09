@@ -354,7 +354,7 @@ const autoMintHandler = function (req, res) {
 
                         console.log(getMetadata(req.params.id)[index])
                         let x = getMetadata(req.params.id)
-                        console.log(x)
+                        console.log(x.Promise[0])
                         mints = [ // array of last mints
                             ...mints,
                             { name: getMetadata(req.params.id)[index].name, date: Date.now()},
