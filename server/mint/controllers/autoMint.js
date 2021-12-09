@@ -46,11 +46,7 @@ let fusePrice = maintenance.fusionPrice
 console.log(maintenance)
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
-const mintScript = {
-    keyHash: cardanocliJs.addressKeyHash(drop.name),
-    type: "sig",
-};
-const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript); // note the mintScript being passed as parameter
+ // note the mintScript being passed as parameter
 
 const firstWallet = // this should be your personal wallet to receive funds
     maintenance.dropWallet;
@@ -396,6 +392,12 @@ const autoMintHandler = function (req, res) {
 };
 
 const mint = function (receiver, utxo, _metadata, index, collectionName) {
+
+    const mintScript = {
+        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(collectionName).name),
+        type: "sig",
+    };
+    const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript);
 
     const metadata = { // declares the basse of the transaction metadata
         721: {
