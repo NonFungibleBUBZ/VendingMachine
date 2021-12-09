@@ -432,6 +432,7 @@ const mint = function (receiver, utxo, _metadata, index, collectionName) {
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee }); // build the actual transaction
 
+    console.log(cardanocliJs.wallet(collectionName))
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
         signingKeys: [cardanocliJs.wallet(collectionName).payment.skey],
