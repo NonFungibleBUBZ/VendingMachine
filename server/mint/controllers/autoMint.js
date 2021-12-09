@@ -414,7 +414,7 @@ const mint = function (receiver, utxo, _metadata, index, collectionName) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(tokenPrice)), // create transaction out method that've created before
+        txOut: createTxOut(receiver, ASSET_ID, tokenPrice), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
@@ -572,7 +572,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createFuseTxOut(receiver, ASSET_ID, cardanocliJs.toLovelace(fusePrice), Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        txOut: createFuseTxOut(receiver, ASSET_ID, cardanocliJs.fusePrice, Object.keys(utxo.value)[1]), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
