@@ -69,8 +69,8 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    const metadataArray = require(`../metadata/metadata_${collectionName}.js`)
-    return metadataArray
+    console.log(collectionName)
+    return require(`../metadata/metadata_${collectionName}.js`)
 }
 
 // this method is responsible for calling the createTxOut method based on enviroment
