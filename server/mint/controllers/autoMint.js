@@ -7,7 +7,7 @@ const { get_collections, update_collection, set_unavailable, get_availableBubz }
 const  MaintenanceObj  = require('../../maintenance/controller')
 const {promisify} = require("util");
 const readFile = promisify(require('fs').readFile)
-
+var fs = require('fs');
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
 
@@ -71,18 +71,28 @@ const getRandomInt = function(min, max) {
 const getMetadata = async function (collectionName) {
     return await readFile(`../metadata/metadata_${collectionName}.js`)
 }
+var module_holder = {};
 
-function expDefault(path, mode = "sync"){
-
-    const modules = {}
-    const context = require(path, false, /\.js$/, mode)
-    context.keys().forEach(file => {
-        const name = fileName.replace(/^.+\/([^/]+)\.js$/, "$1")
-        modules[name] = context(name).default
-    })
-    return modules
+function LoadModules(path) {
+    fs.lstat(path, function(err, stat) {
+        if (stat.isDirectory()) {
+            // we have a directory: do a tree walk
+            fs.readdir(path, function(err, files) {
+                var f, l = files.length;
+                for (var i = 0; i < l; i++) {
+                    f = path_module.join(path, files[i]);
+                    LoadModules(f);
+                }
+            });
+        } else {
+            // we have a file: load it
+            require(path)(module_holder);
+        }
+    });
 }
 
+
+console.log(LoadModules('../metadata'))
 
 // this method is responsible for calling the createTxOut method based on enviroment
 const createTxOut = function (addressToSend, ASSET_ID, value) {
