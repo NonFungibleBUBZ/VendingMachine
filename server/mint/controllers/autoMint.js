@@ -363,7 +363,7 @@ const autoMintHandler = function (req, res) {
                                 { name:  metadata[index], date: Date.now()},
                             ];
 
-                            mint(address, utxo, metadata[index], index); // call the mint method
+                            mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;
                         },0)
 
@@ -395,7 +395,7 @@ const autoMintHandler = function (req, res) {
         .json({ message: "mint array updated", data: JSON.stringify(mints) });
 };
 
-const mint = function (receiver, utxo, _metadata, index) {
+const mint = function (receiver, utxo, _metadata, index, collectionName) {
 
     const metadata = { // declares the basse of the transaction metadata
         721: {
@@ -434,7 +434,7 @@ const mint = function (receiver, utxo, _metadata, index) {
 
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
-        signingKeys: [drop.payment.skey],
+        signingKeys: [cardanocliJs.wallet(collectionName).payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
