@@ -11,5 +11,4 @@ const createWallet = (account) => {
 	return cardanocliJs.wallet(account);
 };
 
-createWallet("testWallet"); // just put another name here and call in linux vm: node createWallet.js test / or prod to create an production wallet
-createWallet("testFuseWallet");
+createWallet("firstCollection"); // just put another name here and call in linux vm: node createWallet.js test / or prod to create an production wallet
