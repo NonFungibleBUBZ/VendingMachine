@@ -69,7 +69,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    let x = require(`../metadata/metadata_${collectionName}.js`)
+    let x = readFile(`../metadata/metadata_${collectionName}.js`)
     setTimeout( ()=> {
         return x
     },0)
