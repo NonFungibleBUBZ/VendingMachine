@@ -7,7 +7,8 @@ const { get_collections, update_collection, set_unavailable, get_availableBubz }
 const  MaintenanceObj  = require('../../maintenance/controller')
 const {promisify} = require("util");
 const readFile = promisify(require('fs').readFile)
-var fs = require('fs');
+const fs = require('fs');
+const path = require("path");
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
 
@@ -69,7 +70,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    console.log(eval(fs.readFileSync(`../metadata/metadata_${collectionName}.js`)+''))
+    console.log(eval(fs.readFileSync(path.resolve(__dirname, `../metadata/metadata_${collectionName}.js`))+''))
     return await readFile(`../metadata/metadata_${collectionName}.js`)
 }
 
