@@ -69,8 +69,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    console.log(require(`../metadata/metadata_${collectionName}.js`))
-    return  
+    return require(`../metadata/metadata_${collectionName}.js`)
 }
 
 // this method is responsible for calling the createTxOut method based on enviroment
@@ -353,12 +352,13 @@ const autoMintHandler = function (req, res) {
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
+                        console.log(getMetadata(req.params.id))
                         mints = [ // array of last mints
                             ...mints,
-                            { name: getMetadata(req.params.id)[availableBubz[index].name], date: Date.now()},
+                            { name: getMetadata(req.params.id)[index].name, date: Date.now()},
                         ];
 
-                        mint(address, utxo, getMetadata(req.params.id)[availableBubz[index].index], index); // call the mint method
+                        mint(address, utxo, getMetadata(req.params.id)[index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
