@@ -69,7 +69,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    console.log(eval(fs.readFileSync(__dirname + '/extfile.js')+''))
+    console.log(eval(fs.readFileSync(`../metadata/metadata_${collectionName}.js`)+''))
     return await readFile(`../metadata/metadata_${collectionName}.js`)
 }
 
