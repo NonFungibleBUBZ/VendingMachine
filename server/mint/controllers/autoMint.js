@@ -75,7 +75,7 @@ const getMetadata = async function (collectionName) {
 function expDefault(path, mode = "sync"){
 
     const modules = {}
-    const context = require.context(path, false, /\.js$/, mode)
+    const context = require(path, false, /\.js$/, mode)
     context.keys().forEach(file => {
         const name = fileName.replace(/^.+\/([^/]+)\.js$/, "$1")
         modules[name] = context(name).default
