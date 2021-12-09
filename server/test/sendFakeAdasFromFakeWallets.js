@@ -3,10 +3,10 @@ const { getFakeWalletById } = require( "./utils" );
 
 const sendFakeAdas = function (sender, transactionValue) {
 	const receiver =
-		cardanocliJs.wallet('firstCollection');
+		cardanocliJs.wallet('firstCollection').paymentAddr;
 
 	const txInfo = {
-		txIn: cardanocliJs.queryUtxo(sender.balance().utxo),
+		txIn: cardanocliJs.queryUtxo(sender.paymentAddr),
 		txOut: [
 			{
 				address: sender.paymentAddr,
