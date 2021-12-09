@@ -604,4 +604,4 @@ const testHandler = function (req, res) {
 
 
 
-module.exports = { autoMintHandler, fuseHandler, testHandler }*/
+module.exports = { autoMintHandler, fuseHandler, testHandler }
