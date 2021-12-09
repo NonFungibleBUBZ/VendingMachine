@@ -11,12 +11,12 @@ router.get ('/', (req,res) => {
 // every time its called, it looks trough the project wallet if there's any money in it, if there's a transaction with exactly 25Ada it creates an mint transaction
 // sending ada to an desired addres and the NFT to the sender of the 25Ada
 // if there's a different value than 25Ada it gets refunded
-router.get("/autoMint/:collection", autoMintHandler);
+router.get("/autoMint/:id", autoMintHandler);
 
 // fuse system, works like autoMint, but checks if there's a token from the project policy id, if doesn't the value is refunded
 // but if does, it's disposal the nft and mint one random with a bigger rarity based on the assetID
-router.get("/fuse/:collection", fuseHandler)
+router.get("/fuse/:id", fuseHandler)
 
-router.get('/test/:collection', testHandler)
+router.get('/test/:id', testHandler)
 
 module.exports = router;
