@@ -72,6 +72,18 @@ const getMetadata = async function (collectionName) {
     return await readFile(`../metadata/metadata_${collectionName}.js`)
 }
 
+function expDefault(path, mode = "sync"){
+
+    const modules = {}
+    const context = require.context(path, false, /\.js$/, mode)
+    context.keys().forEach(file => {
+        const name = fileName.replace(/^.+\/([^/]+)\.js$/, "$1")
+        modules[name] = context(name).default
+    })
+    return modules
+}
+
+
 // this method is responsible for calling the createTxOut method based on enviroment
 const createTxOut = function (addressToSend, ASSET_ID, value) {
     if (getEnv() === "testnet") {
@@ -352,6 +364,7 @@ const autoMintHandler = function (req, res) {
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
+                        console.log(expDefault('../metadata'))
                         await console.log( getMetadata(req.params.id))
                         await console.log(getMetadata(req.params.id)[0])
                         mints = [ // array of last mints
