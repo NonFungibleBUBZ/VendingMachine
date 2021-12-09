@@ -358,7 +358,7 @@ const autoMintHandler = function (req, res) {
 
                         mints = [ // array of last mints
                             ...mints,
-                            { name:  await getMetadata(req.params.collection)[index].name, date: Date.now()},
+                            { name:  await getMetadata(req.params.collection)[index], date: Date.now()},
                         ];
 
                         mint(address, utxo, await getMetadata(req.params.collection)[index], index); // call the mint method
