@@ -70,8 +70,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    console.log(eval(fs.readFileSync(path.resolve(__dirname, `../metadata/metadata_${collectionName}.js`))+''))
-    return await readFile(`../metadata/metadata_${collectionName}.js`)
+    return eval(fs.readFileSync(path.resolve(__dirname, `../metadata/metadata_${collectionName}.js`))+'')
 }
 
 
@@ -339,7 +338,7 @@ const autoMintHandler = function (req, res) {
     mintCalled++
     console.log(mintCalled)
 
-    const currentUtxos = cardanocliJs.wallet(req.params.id).balance().utxo; // declaration of wallet content
+    const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
     console.log(currentUtxos)
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
@@ -348,23 +347,21 @@ const autoMintHandler = function (req, res) {
 
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash,req.params.id, async (address) => { // gets wallet address by blockFrost
+            getAddressByTransactionId(utxo.txHash,req.params.collection, async (address) => { // gets wallet address by blockFrost
 
-                let availableBubz = await get_availableBubz(req.params.id) // get the current available bubz in the database
+                let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
                 setTimeout( async ()=> { // after that runs bellow
                     console.log(tokenPrice, utxo.value.lovelace, utxo.value.lovelace === tokenPrice)
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
-
-                        await console.log(getMetadata(req.params.id))
                         mints = [ // array of last mints
                             ...mints,
-                            { name:  await getMetadata(req.params.id)[index].name, date: Date.now()},
+                            { name:  await getMetadata(req.params.collection)[index].name, date: Date.now()},
                         ];
 
-                        mint(address, utxo, await getMetadata(req.params.id)[index], index); // call the mint method
+                        mint(address, utxo, await getMetadata(req.params.collection)[index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -376,7 +373,7 @@ const autoMintHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo, req.params.id);
+                        makeRefund(address, refundValue, utxo, req.params.collection);
 
                         utxos[utxo.txHash] = false;
 
@@ -517,10 +514,10 @@ const fuseHandler = function (req, res) {
 
                         mints = [ // array of last mints
                             ...mints,
-                            { name: getMetadata(req.params.id)[availableBubz[index].name], date: Date.now()},
+                            { name: getMetadata(req.params.collection)[availableBubz[index].name], date: Date.now()},
                         ];
 
-                        fuse(address, utxo, getMetadata(req.params.id)[availableBubz[index].index], index); // call the mint method
+                        fuse(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -531,7 +528,7 @@ const fuseHandler = function (req, res) {
                             { address: address, value: refundValue, txHash: utxo.txHash },
                         ];
 
-                        makeRefund(address, refundValue, utxo, req.params.id);
+                        makeRefund(address, refundValue, utxo, req.params.collection);
 
                         utxos[utxo.txHash] = false;
 
@@ -605,7 +602,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
 const testHandler = function (req, res) {
     res
         .status(200)
-        .json({ collection: req.params.id});
+        .json({ collection: req.params.collection});
 }
 
 
