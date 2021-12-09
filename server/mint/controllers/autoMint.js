@@ -469,7 +469,7 @@ const makeRefund = function (receiver, refundValue, utxo, walletName) { // make 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
 
 
-    const txSigned = cardanocliJs.transactionSign({txBody: tx, signingKeys: [walletPayAddr(walletName).payment.skey],})
+    const txSigned = cardanocliJs.transactionSign({txBody: tx, signingKeys: [cardanocliJs.wallet(walletName).payment.skey],})
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
     console.log(txHash)
