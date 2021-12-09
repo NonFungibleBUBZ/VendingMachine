@@ -355,15 +355,18 @@ const autoMintHandler = function (req, res) {
                     console.log(tokenPrice, utxo.value.lovelace, utxo.value.lovelace === tokenPrice)
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
+                        let metadata = await getMetadata(req.params.collection)
 
-                        mints = [ // array of last mints
-                            ...mints,
-                            { name:  await getMetadata(req.params.collection)[index], date: Date.now()},
-                        ];
+                        setTimeout( async()=>{
+                            mints = [ // array of last mints
+                                ...mints,
+                                { name:  metadata[index], date: Date.now()},
+                            ];
 
-                        mint(address, utxo, await getMetadata(req.params.collection)[index], index); // call the mint method
+                            mint(address, utxo, metadata[index], index); // call the mint method
+                            utxos[utxo.txHash] = false;
+                        },0)
 
-                        utxos[utxo.txHash] = false;
                     } else { //handle refund
                         console.log('refund?')
                         const refundValue = utxo.value.lovelace;
