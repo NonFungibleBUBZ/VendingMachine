@@ -69,10 +69,7 @@ const getRandomInt = function(min, max) {
         max - min)) + min;
 }
 const getMetadata = async function (collectionName) {
-    let x = readFile(`../metadata/metadata_${collectionName}.js`)
-    setTimeout( ()=> {
-        return x
-    },0)
+    return  readFile(`../metadata/metadata_${collectionName}.js`)
 }
 
 // this method is responsible for calling the createTxOut method based on enviroment
@@ -350,20 +347,19 @@ const autoMintHandler = function (req, res) {
 
                 let availableBubz = await get_availableBubz(req.params.id) // get the current available bubz in the database
 
-                setTimeout( ()=> { // after that runs bellow
+                setTimeout( async ()=> { // after that runs bellow
                     console.log(tokenPrice, utxo.value.lovelace, utxo.value.lovelace === tokenPrice)
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
-                        console.log(getMetadata(req.params.id))
-                        let x = getMetadata(req.params.id)
-                        console.log(x[0])
+                        await console.log( getMetadata(req.params.id))
+                        await console.log(getMetadata(req.params.id)[0])
                         mints = [ // array of last mints
                             ...mints,
-                            { name: getMetadata(req.params.id)[index].name, date: Date.now()},
+                            { name:  await getMetadata(req.params.id)[index].name, date: Date.now()},
                         ];
 
-                        mint(address, utxo, getMetadata(req.params.id)[index], index); // call the mint method
+                        mint(address, utxo, await getMetadata(req.params.id)[index], index); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
