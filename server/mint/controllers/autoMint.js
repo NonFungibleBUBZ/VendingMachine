@@ -355,9 +355,9 @@ const autoMintHandler = function (req, res) {
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
-                        console.log(getMetadata(req.params.id)[index])
+                        console.log(getMetadata(req.params.id))
                         let x = getMetadata(req.params.id)
-                        console.log(x.Promise[0])
+                        console.log(x[0])
                         mints = [ // array of last mints
                             ...mints,
                             { name: getMetadata(req.params.id)[index].name, date: Date.now()},
