@@ -11,7 +11,7 @@ let create = async  function (sender, transactionValue) {
             cardanocliJs.wallet('firstCollection').paymentAddr;
 
         const txInfo = {
-            txIn: cardanocliJs.queryUtxo(cardanocliJs.wallet('fake-client-0').paymentAddr),
+            txIn: cardanocliJs.queryUtxo(cardanocliJs.wallet('fake-wallet-0').paymentAddr),
             txOut: [
                 {
                     address: sender.paymentAddr,
