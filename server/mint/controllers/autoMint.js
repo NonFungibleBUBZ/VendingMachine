@@ -229,10 +229,6 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
     currentValue -= clientValue;
     currentValue -= disposalValue;
 
-    const valorDois = Math.floor(0.25 * currentValue);
-
-    currentValue -= valorDois;
-
     console.log(value)
 
     const valorTres = currentValue;
@@ -242,11 +238,6 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
             address: carteiraTres,
             value: { lovelace: valorTres },
         },
-        {
-            address: carteiraDois,
-            value: { lovelace: valorDois },
-        },
-
         {
             address: carteiraUm,
             value: { lovelace: valorUm },
