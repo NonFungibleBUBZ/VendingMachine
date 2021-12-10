@@ -489,9 +489,16 @@ const fuseHandler = function (req, res) {
     fuseCalled++
     console.log(fuseCalled)
 
-    const currentUtxos = fuseWallet.balance().utxo; // declaration of wallet content
+    const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
 
     console.log(currentUtxos)
+
+    const mintScript = {
+        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.param.collection).name),
+        type: "sig",
+    };
+    const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript);
+
 
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
 
@@ -499,15 +506,15 @@ const fuseHandler = function (req, res) {
         utxo.txHash;
 
         if (utxos[utxo.txHash] === true) { // if it stills there
-            getAddressByTransactionId(utxo.txHash,true, async (address) => { // gets wallet address by blockFrost
+            getAddressByTransactionId(utxo.txHash, req.params.collection, async (address) => { // gets wallet address by blockFrost
 
-                let availableBubz = await get_availableBubz() // get the current available bubz in the database
+                let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
                 setTimeout( ()=> { // after that runs bellow
                     //fuse verification
-                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
+                    if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && true/*utxo.value.lovelace === fusePrice*/) {
 
-                        // if there's an token on the utxo and it has the policyId and the value with it is 25 ada
+                        // if there's an token on the utxo and it has the policyId and the value with it is fusePrice ada
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
