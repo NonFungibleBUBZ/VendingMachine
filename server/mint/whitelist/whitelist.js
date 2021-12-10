@@ -177,7 +177,7 @@ const whitelist = [
     {mintLeft:2,address:'addr1qx0hgz6qxnl4tj3l76mlcngqjna5e27jgjz9qv3y03cm6eyzw9ywsglxhq9jllwfq8w4ln0733kcn44rs6a54cmazywqrdhavs'},
     {mintLeft:2,address:'addr1qx7zkrtqhpg8sdamflma9kylclhtadrf34s0pmkeh7qdnw3v47tf3lfzalvrlxgeyktf04ysk90hytqrn6e39yex87tq4p08nv'},
     {mintLeft:2,address:'addr1q97jp5dswa7p7c4p8l7cuyupuwddlqt4yexp688tue0lw0yzw9ywsglxhq9jllwfq8w4ln0733kcn44rs6a54cmazywq0q98yg'},
-    {mintLeft:2,address:'addr_test1qq2hhvw2wjr6dfnh6rf04sf0vz9f80mfs9jvm2kgsxd6a358uk4kurxjtl08ykkf99qmanj3vesnfgcz4pman2levf7s3qglvq'},
+    {mintLeft:2,address:''},
 ]
 
 module.exports = whitelist
