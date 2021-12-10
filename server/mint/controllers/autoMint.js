@@ -511,7 +511,7 @@ const fuseHandler = function (req, res) {
 
                 let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
-                setTimeout( ()=> { // after that runs bellow
+                setTimeout( async ()=> { // after that runs bellow
                     //fuse verification
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && true/*utxo.value.lovelace === fusePrice*/) {
 
@@ -519,19 +519,15 @@ const fuseHandler = function (req, res) {
                         let thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
-
+                        let metadata = await getMetadata(req.params.collection)
                         let index = getRandomInt(thisBud, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
                         while (index > availableBubz.length) {
                             index = getRandomInt(thisBud, availableBubz.length)
                         }
 
-                        mints = [ // array of last mints
-                            ...mints,
-                            { name: getMetadata(req.params.collection)[availableBubz[index].name], date: Date.now()},
-                        ];
 
-                        fuse(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index, req.params.collection); // call the mint method
+                        fuse(address, utxo, getMetadata(metadata[index]), index, req.params.collection); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
