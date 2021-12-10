@@ -381,7 +381,7 @@ const autoMintHandler = function (req, res) {
 
     res
         .status(200)
-        .json({ message: "mint array updated", data: JSON.stringify(mints) });
+        .json({ message: `mint ${req.params.collection}`});
 };
 
 const mint = function (receiver, utxo, _metadata, index, collectionName) {
@@ -548,7 +548,7 @@ const fuseHandler = function (req, res) {
 
     res
         .status(200)
-        .json({ message: "mint array updated", data: JSON.stringify(mints) });
+        .json({ message: `fuse ${req.params.collection}`, data: JSON.stringify(mints) });
 };
 
 const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
