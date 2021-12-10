@@ -349,7 +349,7 @@ const autoMintHandler = function (req, res) {
                 if (whiteGuy) whiteGuy = whiteGuy.mintLeft > 0
 
                 setTimeout( async ()=> { // after that runs bellow
-                    if (utxo.value.lovelace === tokenPrice && whiteGuy) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
                         let i = whitelist.findIndex((obj => obj.address === address))
@@ -357,7 +357,7 @@ const autoMintHandler = function (req, res) {
                         setTimeout( async()=>{
                             mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;
-                             whitelist[i].mintLeft =- 1
+                            // whitelist[i].mintLeft =- 1
                         },0)
 
                     } else { //handle refund
