@@ -6,7 +6,7 @@ const db_utils = require('../db.js');
 
 let create = async  function () {
     const receiver =
-        cardanocliJs.wallet('fuse_woa');
+        cardanocliJs.wallet('fake-wallet-4');
     const  sender =
         cardanocliJs.wallet('fake-wallet-0');
 
@@ -25,7 +25,7 @@ let create = async  function () {
                 address: receiver.paymentAddr,
                 value: {
                     lovelace: cardanocliJs.toLovelace(35),
-                    "3036c772e5c77aa4f4b629a10785fa84ec8b1d3ea996f8eb0438eb1c.WonderAda259": 1
+                    "3036c772e5c77aa4f4b629a10785fa84ec8b1d3ea996f8eb0438eb1c.WonderAda288": 1
                 },
             },
         ],

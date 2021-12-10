@@ -9,6 +9,7 @@ const {promisify} = require("util");
 const readFile = promisify(require('fs').readFile)
 const fs = require('fs');
 const path = require("path");
+const whitelist = require('../whitelist/whitelist')
 // those are the autoMint methods, i'll do my best to explain what they do, and what they're for, any question message me on discord #Lrovaris#4065
 // i'm online 24/7 there i'll be glad to help, or improve those scripts, or fix if there's anything not working properly
 
@@ -37,6 +38,8 @@ let charityValue = 0
 let fuseCalled = 0
 let mintCalled = 0
 
+let _whiteList = whitelist
+
 // defined those new variables based on the last messages 17/11/21, this way should be easy to set up token price, note that you may face some errors if you put some low values
 // if the console shows errors like UtxoFailure -> valueNotConserved -> negativeValue ...etc it's because the tokenPrice is too low
 let tokenPrice = maintenance.tokenPrice
@@ -44,6 +47,7 @@ let fusePrice = maintenance.fusionPrice
 
 
 console.log(maintenance)
+
 
 // this mint script is responsible for the policy ID VERY IMPORTANT!!!!!!!!!!!!
  // note the mintScript being passed as parameter
@@ -337,7 +341,7 @@ const autoMintHandler = function (req, res) {
                 let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
                 setTimeout( async ()=> { // after that runs bellow
-                    if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value.lovelace === tokenPrice && whitelist.find(sender => sender.address === address)) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
 
@@ -347,6 +351,7 @@ const autoMintHandler = function (req, res) {
                         },0)
 
                     } else { //handle refund
+                        console.log(whitelist.find(sender => sender.address === address))
                         console.log('refund?')
                         const refundValue = utxo.value.lovelace;
 
