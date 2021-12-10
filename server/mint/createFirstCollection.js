@@ -5,29 +5,28 @@ const { cardanocliJs } = require( "../utils/cardano" );
 const db_utils = require('../db.js');
 
 let create = async  function () {
+    let _allBubz = []
 
+    metadataArray.forEach( (bub,i) => {
+        _allBubz.push({name:bub.name, index:i, available:true})
+    })
 
-
-    let db_conn = await db_utils.get_db(); // db connection
-
-    let allCollections = await db_conn.collection("collections").find({}).toArray(); // getting all the collections
-
-    setTimeout( async () => { // setTimeout in javascript makes sure that it's content only happens after a desired time, in this case "0" , so this part
-        // of the code runs on the next tick of the clock
-
-        let firstCollection = allCollections.find(_collection_id => _collection_id.name == undefined) // looks for the collection parameter name, in the controller usage we set it as "firstCollection"
-
-        if (firstCollection) {
-
-            firstCollection.name = 'woa'
-
-            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(firstCollection._id)}, firstCollection, {
-                w: "majority",
-                upsert: false
-            });
-
-        }
-    }, 0)
+    setTimeout( ()=>{
+        db.register_collection(
+            {
+                name:'woa',
+                allBubz : _allBubz,
+                lastMinted: {},
+                totalValueCollected: 0,
+                valueSentOut:0,
+                ValueSentDeveloper:0,
+                nftDroped:[],
+                totalMintingCost:0,
+                totalSentDonation:0,
+                availableBubz: _allBubz
+            }
+        )
+    },0)
 
 }
 
