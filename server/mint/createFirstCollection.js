@@ -2,9 +2,11 @@
 const db = require('./db');
 const metadataArray = require('../mint/metadata/metadata_woa')
 const { cardanocliJs } = require( "../utils/cardano" );
-
+const {db_utils} = require('../db')
 
 let create = async  function () {
+
+
 
     let db_conn = await db_utils.get_db(); // db connection
 
