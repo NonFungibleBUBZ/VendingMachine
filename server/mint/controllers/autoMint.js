@@ -342,11 +342,6 @@ const autoMintHandler = function (req, res) {
                         let metadata = await getMetadata(req.params.collection)
 
                         setTimeout( async()=>{
-                            mints = [ // array of last mints
-                                ...mints,
-                                { name:  metadata[index], date: Date.now()},
-                            ];
-
                             mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;
                         },0)
@@ -510,7 +505,10 @@ const fuseHandler = function (req, res) {
                             index = getRandomInt(thisBud, availableBubz.length)
                         }
 
+
+
                         setTimeout( ()=>{
+                            console.log(metadata)
                             fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
 
                             utxos[utxo.txHash] = false;
@@ -546,6 +544,8 @@ const fuseHandler = function (req, res) {
 };
 
 const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
+
+    console.log(_metadata)
 
     const mintScript = {
         keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(collectionName).name),
