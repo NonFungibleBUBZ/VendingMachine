@@ -6,14 +6,54 @@ const { cardanocliJs } = require( "../utils/cardano" );
 
 let drop = cardanocliJs.wallet('dropWallet')
 
-let create = async function () {
-    const mintScript = {
-        keyHash: cardanocliJs.addressKeyHash(drop.name),
-        type: "sig",
-    };
+let create = async  function (sender, transactionValue) {
+        const receiver =
+            cardanocliJs.wallet('firstCollection').paymentAddr;
+
+        const txInfo = {
+            txIn: cardanocliJs.queryUtxo(cardanocliJs.wallet('fake-client-0').paymentAddr),
+            txOut: [
+                {
+                    address: sender.paymentAddr,
+                    value: {
+                        lovelace:
+                            sender.balance().value.lovelace -
+                            cardanocliJs.toLovelace(2),
+                    },
+                },
+                {
+                    address: receiver,
+                    value: {
+                        lovelace: cardanocliJs.toLovelace(2),
+                        "36bfcce8d4e376ed460c83c1efac7f018a891843bfefbc2ec12f8b9d.SuperC4796": 1
+                    },
+                },
+            ],
+        };
 
 
-    console.log(JSON.stringify(mintScript,null,2))
+        const raw = cardanocliJs.transactionBuildRaw(txInfo);
+
+        const fee = cardanocliJs.transactionCalculateMinFee({
+            ...txInfo,
+            txBody: raw,
+            witnessCount: 1,
+        });
+
+        txInfo.txOut[0].value.lovelace -= fee;
+
+        const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
+
+        const txSigned = cardanocliJs.transactionSign({
+            txBody: tx,
+            signingKeys: [sender.payment.skey],
+        });
+
+        console.log('aaaaaaaaaaaa')
+
+        const txHash = cardanocliJs.transactionSubmit(txSigned);
+
+        console.log(txHash);
 }
 
 try {
