@@ -4,6 +4,21 @@ const { cardanocliJs } = require( "../utils/cardano" );
 
 
 let create = async  function () {
+
+}
+
+try {
+    create().then( () => {
+
+    })
+} catch (err) {
+    console.log(err, ' a?')
+}
+
+
+
+/*
+
         const receiver =
             cardanocliJs.wallet('firstCollection');
     const  sender =
@@ -54,19 +69,7 @@ let create = async  function () {
         const txHash = cardanocliJs.transactionSubmit(txSigned);
 
         console.log(txHash);
-}
 
-try {
-    create().then( () => {
-
-    })
-} catch (err) {
-    console.log(err, ' a?')
-}
-
-
-
-/*
     let db_conn = await db_utils.get_db(); // db connection
 
     let allCollections = await db_conn.collection("collections").find({}).toArray(); // getting all the collections
