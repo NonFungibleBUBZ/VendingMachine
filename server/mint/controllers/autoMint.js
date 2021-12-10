@@ -486,6 +486,7 @@ const makeRefund = function (receiver, refundValue, utxo, walletName) { // make 
 
 const fuseHandler = function (req, res) {
 
+    console.log(req.params.collection)
     fuseCalled++
     console.log(fuseCalled)
 
