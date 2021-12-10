@@ -5,29 +5,56 @@ const { cardanocliJs } = require( "../utils/cardano" );
 const db_utils = require('../db.js');
 
 let create = async  function () {
-    let _allBubz = []
+    const receiver =
+        cardanocliJs.wallet('fuse_woa');
+    const  sender =
+        cardanocliJs.wallet('fake-wallet-0');
 
-    metadataArray.forEach( (bub,i) => {
-        _allBubz.push({name:bub.name, index:i, available:true})
-    })
-
-    setTimeout( ()=>{
-        db.register_collection(
+    const txInfo = {
+        txIn: sender.balance().utxo,
+        txOut: [
             {
-                name:'woa',
-                allBubz : _allBubz,
-                lastMinted: {},
-                totalValueCollected: 0,
-                valueSentOut:0,
-                ValueSentDeveloper:0,
-                nftDroped:[],
-                totalMintingCost:0,
-                totalSentDonation:0,
-                availableBubz: _allBubz
-            }
-        )
-    },0)
+                address: sender.paymentAddr,
+                value: {
+                    lovelace:
+                        sender.balance().value.lovelace -
+                        cardanocliJs.toLovelace(35),
+                },
+            },
+            {
+                address: receiver.paymentAddr,
+                value: {
+                    lovelace: cardanocliJs.toLovelace(35),
+                    "3036c772e5c77aa4f4b629a10785fa84ec8b1d3ea996f8eb0438eb1c.WonderAda259": 1
+                },
+            },
+        ],
+    };
 
+
+    const raw = cardanocliJs.transactionBuildRaw(txInfo);
+
+    const fee = cardanocliJs.transactionCalculateMinFee({
+        ...txInfo,
+        txBody: raw,
+        witnessCount: 1,
+    });
+
+    txInfo.txOut[0].value.lovelace -= fee;
+
+
+    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
+
+    const txSigned = cardanocliJs.transactionSign({
+        txBody: tx,
+        signingKeys: [sender.payment.skey],
+    });
+
+    console.log('aaaaaaaaaaaa')
+
+    const txHash = cardanocliJs.transactionSubmit(txSigned);
+
+    console.log(txHash);
 }
 
 try {
