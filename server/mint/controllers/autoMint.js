@@ -233,6 +233,8 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
 
     currentValue -= valorDois;
 
+    console.log(currentValue)
+
     const valorTres = currentValue;
 
     let txOutArray = [
