@@ -494,7 +494,6 @@ const fuseHandler = function (req, res) {
                     //fuse verification
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
 
-
                         let ththisBud
 
                         // if there's an token on the utxo and it has the policyId and the value with it is fusePrice ada
@@ -585,7 +584,7 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createFuseTxOut(receiver, ASSET_ID, 34814127, Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        txOut: createFuseTxOut(receiver, ASSET_ID, fusePrice, Object.keys(utxo.value)[1]), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
