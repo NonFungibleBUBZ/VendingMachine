@@ -13,14 +13,6 @@ let create = async  function () {
             txIn: sender.balance().utxo,
             txOut: [
                 {
-                    address: sender.paymentAddr,
-                    value: {
-                        lovelace:
-                            sender.balance().value.lovelace -
-                            cardanocliJs.toLovelace(2),
-                    },
-                },
-                {
                     address: receiver.paymentAddr,
                     value: {
                         lovelace: cardanocliJs.toLovelace(2),
