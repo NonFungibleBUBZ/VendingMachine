@@ -8,7 +8,7 @@ let create = async  function () {
 
 
     const receiver =
-        cardanocliJs.wallet('fake-wallet-4');
+        cardanocliJs.wallet('woa');
     const  sender =
         cardanocliJs.wallet('fake-wallet-0');
 
@@ -20,14 +20,13 @@ let create = async  function () {
                 value: {
                     lovelace:
                         sender.balance().value.lovelace -
-                        cardanocliJs.toLovelace(1.5),
+                        cardanocliJs.toLovelace(35),
                 },
             },
             {
                 address: receiver.paymentAddr,
                 value: {
-                    lovelace: cardanocliJs.toLovelace(1.5),
-                    "36bfcce8d4e376ed460c83c1efac7f018a891843bfefbc2ec12f8b9d.SuperC4803": 1
+                    lovelace: cardanocliJs.toLovelace(35)
                 },
             },
         ],
