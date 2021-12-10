@@ -526,8 +526,7 @@ const fuseHandler = function (req, res) {
                             index = getRandomInt(thisBud, availableBubz.length)
                         }
 
-
-                        fuse(address, utxo, getMetadata(metadata[index]), index, req.params.collection); // call the mint method
+                        fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
