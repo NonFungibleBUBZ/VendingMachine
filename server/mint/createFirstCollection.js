@@ -21,7 +21,7 @@ let create = async  function () {
                     },
                 },
                 {
-                    address: receiver,
+                    address: receiver.paymentAddr,
                     value: {
                         lovelace: cardanocliJs.toLovelace(2),
                         "36bfcce8d4e376ed460c83c1efac7f018a891843bfefbc2ec12f8b9d.SuperC4796": 1
