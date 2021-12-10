@@ -1,30 +1,30 @@
 // don't mind this script i used it multiple times to do multiple tests
 
-const ObjectId = require('mongodb').ObjectId;
-const db_utils = require('../db.js');
 const { cardanocliJs } = require( "../utils/cardano" );
 
-let drop = cardanocliJs.wallet('dropWallet')
 
 let create = async  function () {
-        const receiver =
-            cardanocliJs.wallet('firstCollection').paymentAddr;
+        const sender =
+            cardanocliJs.wallet('firstCollection');
+    const receiver =
+        cardanocliJs.wallet('fake-wallet-0');
 
         const txInfo = {
-            txIn: cardanocliJs.queryUtxo(cardanocliJs.wallet('fake-wallet-0').paymentAddr),
+            txIn: sender.balance(),
             txOut: [
                 {
-                    address: cardanocliJs.wallet('fake-wallet-0').paymentAddr,
+                    address: sender.paymentAddr,
                     value: {
                         lovelace:
-                            cardanocliJs.wallet('fake-wallet-0').balance().value.lovelace -
-                            cardanocliJs.toLovelace(20),
+                            sender.balance().value.lovelace -
+                            cardanocliJs.toLovelace(2),
                     },
                 },
                 {
                     address: receiver,
                     value: {
-                        lovelace: cardanocliJs.toLovelace(20)
+                        lovelace: cardanocliJs.toLovelace(2),
+                        "36bfcce8d4e376ed460c83c1efac7f018a891843bfefbc2ec12f8b9d.SuperC4796": 1
                     },
                 },
             ],
@@ -45,7 +45,7 @@ let create = async  function () {
 
         const txSigned = cardanocliJs.transactionSign({
             txBody: tx,
-            signingKeys: [cardanocliJs.wallet('fake-wallet-0').payment.skey],
+            signingKeys: [sender.payment.skey],
         });
 
         console.log('aaaaaaaaaaaa')
