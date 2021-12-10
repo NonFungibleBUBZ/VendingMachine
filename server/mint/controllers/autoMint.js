@@ -475,7 +475,7 @@ const fuseHandler = function (req, res) {
     fuseCalled++
     console.log(`fuse ${req.params.collection}`)
 
-    const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
+    const currentUtxos = cardanocliJs.wallet('fuse_'+req.params.collection).balance().utxo; // declaration of wallet content
 
 
     const mintScript = {
