@@ -475,7 +475,7 @@ const fuseHandler = function (req, res) {
     fuseCalled++
     console.log(`fuse ${req.params.collection}`)
 
-    const currentUtxos = cardanocliJs.wallet('fuse_'+req.params.collection).balance().utxo; // declaration of wallet content
+    const currentUtxos = cardanocliJs.wallet('fuse_'+   req.params.collection).balance().utxo; // declaration of wallet content
 
 
     const mintScript = {
@@ -510,9 +510,12 @@ const fuseHandler = function (req, res) {
                             index = getRandomInt(thisBud, availableBubz.length)
                         }
 
-                        fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
+                        setTimeout( ()=>{
+                            fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
 
-                        utxos[utxo.txHash] = false;
+                            utxos[utxo.txHash] = false;
+                        },0)
+
                     } else { //handle refund
                         const refundValue = utxo.value.lovelace;
 
