@@ -495,13 +495,14 @@ const fuseHandler = function (req, res) {
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
 
 
+                        let ththisBud
 
                         // if there's an token on the utxo and it has the policyId and the value with it is fusePrice ada
                         if(req.params.collection === 'firstCollection') {
-                            let thisBud = Object.keys(utxo.value)[1].substring(63,67)
+                             thisBud = Object.keys(utxo.value)[1].substring(63,67)
                         }
                         if(req.params.collection === 'woa') {
-                            let thisBud = Object.keys(utxo.value)[1].substring(66,69)
+                             thisBud = Object.keys(utxo.value)[1].substring(66,69)
                         }
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
