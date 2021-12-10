@@ -508,7 +508,7 @@ const fuseHandler = function (req, res) {
 
 
                         setTimeout( ()=>{
-                            console.log(metadata)
+                            console.log(index)
                             fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
 
                             utxos[utxo.txHash] = false;
@@ -544,6 +544,8 @@ const fuseHandler = function (req, res) {
 };
 
 const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
+
+
 
     console.log(_metadata)
 
