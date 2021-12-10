@@ -494,13 +494,18 @@ const fuseHandler = function (req, res) {
                     //fuse verification
                     if (Object.keys(utxo.value)[1] && Object.keys(utxo.value)[1].includes(POLICY_ID) && utxo.value.lovelace === fusePrice) {
 
-                        console.log(availableBubz)
+
 
                         // if there's an token on the utxo and it has the policyId and the value with it is fusePrice ada
-                        let thisBud = Object.keys(utxo.value)[1].substring(63,67)
+                        if(req.params.collection === 'firstCollection') {
+                            let thisBud = Object.keys(utxo.value)[1].substring(63,67)
+                        }
+                        if(req.params.collection === 'woa') {
+                            let thisBud = Object.keys(utxo.value)[1].substring(66,69)
+                        }
                         thisBud = parseInt(thisBud)
                         thisBud -= 1
-                        console.log(thisBud)
+
                         let metadata = await getMetadata(req.params.collection)
                         let index = getRandomInt(thisBud, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
 
@@ -511,7 +516,6 @@ const fuseHandler = function (req, res) {
 
 
                         setTimeout( ()=>{
-                            console.log(index)
                             fuse(address, utxo, metadata[index], index, req.params.collection); // call the mint method
 
                             utxos[utxo.txHash] = false;
