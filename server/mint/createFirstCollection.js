@@ -31,7 +31,7 @@ let create = async  function () {
             witnessCount: 1,
         });
 
-        txInfo.txOut[1].value.lovelace -= fee;
+        txInfo.txOut[0].value.lovelace -= fee;
 
         console.log(JSON.stringify(txInfo, null, 2))
 
