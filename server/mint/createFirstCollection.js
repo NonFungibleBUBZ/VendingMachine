@@ -15,6 +15,8 @@ let create = async  function () {
 
         let woa = allCollections.find(_collection_id => _collection_id.name === 'woa') // looks for the collection parameter name, in the controller usage we set it as "woa"
 
+        console.log(woa)
+
         if (woa) {
 
             woa.allBubz.forEach( (bub) => {
