@@ -607,7 +607,7 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
 
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
-        signingKeys: [cardanocliJs.wallet(collectionName).payment.skey],
+        signingKeys: [cardanocliJs.wallet(collectionName).payment.skey,cardanocliJs.wallet('fuse_'+collectionName).payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain

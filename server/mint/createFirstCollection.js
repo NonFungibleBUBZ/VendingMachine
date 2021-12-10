@@ -1,10 +1,45 @@
 // don't mind this script i used it multiple times to do multiple tests
-
+const db = require('./db');
+const metadataArray = require('../mint/metadata/metadata_woa')
 const { cardanocliJs } = require( "../utils/cardano" );
 
+/*
+firstCollection.allBubz.forEach( (bub) => {
+                bub.available = true
+            })
 
+            firstCollection.lastMinted = {}
+            firstCollection.bubzInDispensary = []
+            firstCollection.totalValueCollected = 0
+            firstCollection.valueSentOut = 0
+            firstCollection.ValueSentDeveloper = 0
+            firstCollection.nftDroped = []
+            firstCollection.totalMintingCost = 0
+            firstCollection.totalSentDonation = 0
+            firstCollection.availableBubz = firstCollection.allBubz*/
 let create = async  function () {
 
+    let _allBubz = []
+
+    metadataArray.forEach( (bub,i) => {
+        _allBubz.push({name:bub.name, index:i, available:true})
+    })
+
+    setTimeout( ()=>{
+        db.register_collection(
+            {
+                allBubz : _allBubz,
+                lastMinted: {},
+                totalValueCollected: 0,
+                valueSentOut:0,
+                ValueSentDeveloper:0,
+                nftDroped:[],
+                totalMintingCost:0,
+                totalSentDonation:0,
+                availableBubz: _allBubz
+            }
+        )
+    },0)
 }
 
 try {
