@@ -10,7 +10,7 @@ let create = async  function () {
         cardanocliJs.wallet('fake-wallet-0');
 
         const txInfo = {
-            txIn: sender.balance(),
+            txIn: sender.balance().utxo,
             txOut: [
                 {
                     address: sender.paymentAddr,
