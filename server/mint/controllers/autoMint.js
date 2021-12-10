@@ -229,8 +229,6 @@ const testFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) { /
     currentValue -= clientValue;
     currentValue -= disposalValue;
 
-    console.log(value)
-
     const valorTres = currentValue;
 
     let txOutArray = [
@@ -325,11 +323,9 @@ const autoMintHandler = function (req, res) {
 
 
     mintCalled++
-    console.log(mintCalled)
+    console.log(`mint ${req.params.collection}`)
 
     const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
-    console.log(currentUtxos)
-
     for (let i = 0; i < currentUtxos.length; i++) { // one loop for each transaction hash in wallet
         const utxo = currentUtxos[i];
         utxo.txHash;
@@ -341,7 +337,6 @@ const autoMintHandler = function (req, res) {
                 let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 
                 setTimeout( async ()=> { // after that runs bellow
-                    console.log(tokenPrice, utxo.value.lovelace, utxo.value.lovelace === tokenPrice)
                     if (utxo.value.lovelace === tokenPrice) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
@@ -427,7 +422,6 @@ const mint = function (receiver, utxo, _metadata, index, collectionName) {
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee }); // build the actual transaction
 
-    console.log(cardanocliJs.wallet(collectionName))
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
         signingKeys: [cardanocliJs.wallet(collectionName).payment.skey],
@@ -474,18 +468,15 @@ const makeRefund = function (receiver, refundValue, utxo, walletName) { // make 
     const txSigned = cardanocliJs.transactionSign({txBody: tx, signingKeys: [cardanocliJs.wallet(walletName).payment.skey],})
 
     const txHash = cardanocliJs.transactionSubmit(txSigned);
-    console.log(txHash)
 };
 
 const fuseHandler = function (req, res) {
 
-    console.log(req.params.collection)
     fuseCalled++
-    console.log(fuseCalled)
+    console.log(`fuse ${req.params.collection}`)
 
     const currentUtxos = cardanocliJs.wallet(req.params.collection).balance().utxo; // declaration of wallet content
 
-    console.log(currentUtxos)
 
     const mintScript = {
         keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.params.collection).name),
@@ -600,8 +591,6 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
 
 
     txInfo.txOut[0].value.lovelace -= fee; // value minus fee
-
-    console.log(JSON.stringify(txInfo, null, 2))
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee }); // build the actual transaction
 
