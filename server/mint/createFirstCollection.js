@@ -41,6 +41,8 @@ let create = async  function () {
 
         txInfo.txOut[1].value.lovelace -= fee;
 
+        console.log(JSON.stringify(txInfo, null, 2))
+
         const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
 
         const txSigned = cardanocliJs.transactionSign({
