@@ -531,7 +531,7 @@ const fuseHandler = function (req, res) {
                             { name: getMetadata(req.params.collection)[availableBubz[index].name], date: Date.now()},
                         ];
 
-                        fuse(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index); // call the mint method
+                        fuse(address, utxo, getMetadata(req.params.collection)[availableBubz[index].index], index, req.params.collection); // call the mint method
 
                         utxos[utxo.txHash] = false;
                     } else { //handle refund
@@ -563,10 +563,10 @@ const fuseHandler = function (req, res) {
         .json({ message: "mint array updated", data: JSON.stringify(mints) });
 };
 
-const fuse = function (receiver, utxo, _metadata, index) {
+const fuse = function (receiver, utxo, _metadata, index, collectionName) {
 
     const mintScript = {
-        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.params.collection).name),
+        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(collectionName).name),
         type: "sig",
     };
     const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript);
@@ -608,7 +608,7 @@ const fuse = function (receiver, utxo, _metadata, index) {
 
     const txSigned = cardanocliJs.transactionSign({ // sign the transaction
         txBody: tx,
-        signingKeys: [drop.payment.skey, fuseWallet.payment.skey],
+        signingKeys: [cardanocliJs.wallet(collectionName).payment.skey],
     });
 
     const txHash = cardanocliJs.transactionSubmit(txSigned); // send the transaction to the blockchain
