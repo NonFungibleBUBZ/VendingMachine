@@ -2,11 +2,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -24,11 +19,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -48,11 +38,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -70,11 +55,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -94,11 +74,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -116,11 +91,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -140,11 +110,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -162,11 +127,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -186,11 +146,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -208,11 +163,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -232,11 +182,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -254,11 +199,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -278,11 +218,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -300,11 +235,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -324,11 +254,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -346,11 +271,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -370,11 +290,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -392,11 +307,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -416,11 +326,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -438,11 +343,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -462,11 +362,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -484,11 +379,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -508,11 +398,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmPDzun94v9NFqw3wyhNXDbYQ2DvyW6qJN9rQwGuUVi8eX"
@@ -530,11 +415,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYsgUn1KnYVNimx5AWTcTajM6u5X458rUJk7Td4geqZWL"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -554,11 +434,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -576,11 +451,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -600,11 +470,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -622,11 +487,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -646,11 +506,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -668,11 +523,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -692,11 +542,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -714,11 +559,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -738,11 +578,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -760,11 +595,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -784,11 +614,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -806,11 +631,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -830,11 +650,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -852,11 +667,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -876,11 +686,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -898,11 +703,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -922,11 +722,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -944,11 +739,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -968,11 +758,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -990,11 +775,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1014,11 +794,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -1036,11 +811,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1060,11 +830,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUNwVwYBtpsq2hUamdqyPmVx4N8X2Y3maXbJbYiS6UHeR"
@@ -1082,11 +847,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmabB6dripfbCZy2fy299iMpWw1f6ZBAh5sBEZdHnEXGRg"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1106,11 +866,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1128,11 +883,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1152,11 +902,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1174,11 +919,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1198,11 +938,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1220,11 +955,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1244,11 +974,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1266,11 +991,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1290,11 +1010,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1312,11 +1027,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1336,11 +1046,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1358,11 +1063,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1382,11 +1082,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1404,11 +1099,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1428,11 +1118,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1450,11 +1135,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1474,11 +1154,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1496,11 +1171,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1520,11 +1190,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1542,11 +1207,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1566,11 +1226,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1588,11 +1243,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1612,11 +1262,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXAW7drFBR1AMNUEp69rVtLDFhgqm9wKYibwP98jU2mm6"
@@ -1634,11 +1279,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUSGHz491D7ahRAdLDYnEZZY1gZyRMqaE3oZHCtMJLpxx"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1658,11 +1298,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1680,11 +1315,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1704,11 +1334,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1726,11 +1351,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1750,11 +1370,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1772,11 +1387,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1796,11 +1406,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1818,11 +1423,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1842,11 +1442,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1864,11 +1459,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1888,11 +1478,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1910,11 +1495,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1934,11 +1514,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -1956,11 +1531,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -1980,11 +1550,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -2002,11 +1567,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2026,11 +1586,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -2048,11 +1603,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2072,11 +1622,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -2094,11 +1639,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2118,11 +1658,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -2140,11 +1675,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2164,11 +1694,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmXwEz4UpNYK5y8vXZ79sVLXgacMxbKbCcVFEq1kQ1DpjV"
@@ -2186,11 +1711,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmYifnLoSu3V3ctHJUrf6cEnWEGVvAtxkj3bzfr4RHGePs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2210,11 +1730,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2232,11 +1747,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2256,11 +1766,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2278,11 +1783,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2302,11 +1802,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2324,11 +1819,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2348,11 +1838,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2370,11 +1855,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2394,11 +1874,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2416,11 +1891,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2440,11 +1910,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2462,11 +1927,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2486,11 +1946,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2508,11 +1963,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2532,11 +1982,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2554,11 +1999,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2578,11 +2018,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2600,11 +2035,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2624,11 +2054,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2646,11 +2071,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2670,11 +2090,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2692,11 +2107,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2716,11 +2126,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmWTiksHnM7eDZJKJENHdWN5m9uTuiMaURsXRU3mpmELFA"
@@ -2738,11 +2143,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmfAdiiQzw4CYGJzxNNRxqNrrg7RBGJAFYHyMmeysN3kJG"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2762,11 +2162,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -2784,11 +2179,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2808,11 +2198,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -2830,11 +2215,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2854,11 +2234,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -2876,11 +2251,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2900,11 +2270,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -2922,11 +2287,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2946,11 +2306,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -2968,11 +2323,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -2992,11 +2342,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3014,11 +2359,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3038,11 +2378,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3060,11 +2395,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3084,11 +2414,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3106,11 +2431,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3130,11 +2450,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3152,11 +2467,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3176,11 +2486,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3198,11 +2503,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3222,11 +2522,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3244,11 +2539,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3268,11 +2558,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmPeAvrEkA7JfvpHRcqCKjL9p2ck5QEM9rcUhqAFAKYWBr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmUvLLVZRTjFYsh8cS16gjnHtH7dAfgtFuTCBcTCewCwQk"
@@ -3290,11 +2575,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3314,11 +2594,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3336,11 +2611,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3360,11 +2630,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3382,11 +2647,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3406,11 +2666,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3428,11 +2683,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3452,11 +2702,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3474,11 +2719,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3498,11 +2738,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3520,11 +2755,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3544,11 +2774,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3566,11 +2791,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3590,11 +2810,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3612,11 +2827,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3636,11 +2846,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3658,11 +2863,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3682,11 +2882,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3704,11 +2899,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3728,11 +2918,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3750,11 +2935,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3774,11 +2954,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdiCiHVKme6z52RuMRnRj9EV5HiCA7hXgd1mBBCJgJJa4"
@@ -3796,11 +2971,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmeHXrp7UsLSTF6k3EtqWTpzK3BwELMvgpPJT6iyDv4eJ4"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3820,11 +2990,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -3842,11 +3007,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3866,11 +3026,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -3888,11 +3043,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3912,11 +3062,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -3934,11 +3079,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -3958,11 +3098,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -3980,11 +3115,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4004,11 +3134,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4026,11 +3151,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4050,11 +3170,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4072,11 +3187,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4096,11 +3206,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4118,11 +3223,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4142,11 +3242,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4164,11 +3259,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4188,11 +3278,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4210,11 +3295,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4234,11 +3314,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4256,11 +3331,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4280,11 +3350,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4302,11 +3367,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4326,11 +3386,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmagMnBRVknqDhcu2YB8H6uC5zNJEt4vbS9Q4bCGxfGBPr"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmcMS1hR9Hi1GWtgBLu8SP4nL1SJjdfbsdHCpbLQEHTFKB"
@@ -4348,11 +3403,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4372,11 +3422,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4394,11 +3439,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4418,11 +3458,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4440,11 +3475,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4464,11 +3494,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4486,11 +3511,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4510,11 +3530,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4532,11 +3547,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4556,11 +3566,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4578,11 +3583,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4602,11 +3602,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4624,11 +3619,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4648,11 +3638,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4670,11 +3655,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4694,11 +3674,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4716,11 +3691,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4740,11 +3710,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZ7nx4dwjCVwcqqFtchSwZzaHPP7WC4SJrqJSSQvEPyuU"
@@ -4762,11 +3727,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRHfTgjCiXrKPfT9kuMXpub4hVwSzQdM1QEvvWQhME52d"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4786,11 +3746,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -4808,11 +3763,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4832,11 +3782,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -4854,11 +3799,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4878,11 +3818,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -4900,11 +3835,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4924,11 +3854,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -4946,11 +3871,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -4970,11 +3890,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -4992,11 +3907,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5016,11 +3926,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -5038,11 +3943,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5062,11 +3962,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -5084,11 +3979,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5108,11 +3998,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -5130,11 +4015,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5154,11 +4034,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmehNK6ERtqpZFBqxgbACsSM1Tmgm18TVad2nSNjySUdTm"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQy7YvcrxCdG9Wzxai1bbcJ7RtCAS46rk73osva8Am3Zz"
@@ -5176,11 +4051,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5200,11 +4070,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5222,11 +4087,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5246,11 +4106,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5268,11 +4123,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5292,11 +4142,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5314,11 +4159,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5338,11 +4178,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5360,11 +4195,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5384,11 +4214,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5406,11 +4231,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5430,11 +4250,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5452,11 +4267,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5476,11 +4286,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmdwnfCoeWSuNRV4yAWBSCd6HXi9DZUFHPpLTQAp6whbLD"
@@ -5498,11 +4303,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmc1pLKoKX8HVrnNmciW82j7BxSgjWPCppiUxN9EnaYzS6"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5522,11 +4322,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmfGWc8pW33En2dWm5qoY5otxVLjSEZPch2EZLKVtBu88G"
@@ -5544,11 +4339,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5568,11 +4358,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmfGWc8pW33En2dWm5qoY5otxVLjSEZPch2EZLKVtBu88G"
@@ -5590,11 +4375,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5614,11 +4394,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmfGWc8pW33En2dWm5qoY5otxVLjSEZPch2EZLKVtBu88G"
@@ -5636,11 +4411,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5660,11 +4430,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmfGWc8pW33En2dWm5qoY5otxVLjSEZPch2EZLKVtBu88G"
@@ -5682,11 +4447,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5706,11 +4466,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNR2CTUHuU1frqMaiM9mSTDWCY6m52k1pUPTSisXHXd1x"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmfGWc8pW33En2dWm5qoY5otxVLjSEZPch2EZLKVtBu88G"
@@ -5728,11 +4483,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5752,11 +4502,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmSRPChNGJatUzia6juFFd7xsM41YHLvqaiYFkqvuVwVyZ"
@@ -5774,11 +4519,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5798,11 +4538,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmSRPChNGJatUzia6juFFd7xsM41YHLvqaiYFkqvuVwVyZ"
@@ -5820,11 +4555,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5844,11 +4574,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmSRPChNGJatUzia6juFFd7xsM41YHLvqaiYFkqvuVwVyZ"
@@ -5866,11 +4591,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5890,11 +4610,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmSRPChNGJatUzia6juFFd7xsM41YHLvqaiYFkqvuVwVyZ"
@@ -5912,11 +4627,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUw7F5n8WMGf9Tz9yXPatuwMaLJPcPATE31P7JxbNMvig"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5936,11 +4646,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmeStxvSMNyunZCxxu52a5QJNU7jV9zei7hEEabHm4tNxw"
@@ -5958,11 +4663,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -5982,11 +4682,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmeStxvSMNyunZCxxu52a5QJNU7jV9zei7hEEabHm4tNxw"
@@ -6004,11 +4699,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6028,11 +4718,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmeStxvSMNyunZCxxu52a5QJNU7jV9zei7hEEabHm4tNxw"
@@ -6050,11 +4735,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmUJ2ppALPMXDJGisqEJHTEWQwPTFiLmduV1QAcPv51jPv"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6074,11 +4754,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQBFdCSvGf7pwCo4vY4aMHKUCbZ3zW5HHF464uRUyuBc8"
@@ -6096,11 +4771,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6120,11 +4790,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQBFdCSvGf7pwCo4vY4aMHKUCbZ3zW5HHF464uRUyuBc8"
@@ -6142,11 +4807,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6166,11 +4826,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmQBFdCSvGf7pwCo4vY4aMHKUCbZ3zW5HHF464uRUyuBc8"
@@ -6188,11 +4843,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdHi5c3tFuHzRTvZUoej5BHCS5agDskkApxPy3gz73ex9"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6212,11 +4862,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZjWWmoDbTJLrFpkehn8wYV2FAfMhBnK4Xpwhw7YLJ9QE"
@@ -6234,11 +4879,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6258,11 +4898,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZjWWmoDbTJLrFpkehn8wYV2FAfMhBnK4Xpwhw7YLJ9QE"
@@ -6280,11 +4915,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6304,11 +4934,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZjWWmoDbTJLrFpkehn8wYV2FAfMhBnK4Xpwhw7YLJ9QE"
@@ -6326,11 +4951,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmdqugEPrKujr2WsfSAZd76JqNBUcSB7UVusNvSaG61798"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6350,11 +4970,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZWCSmGjiKqsWwDNKjqQcmggqJGAygCkZHF6MCNei5b1h"
@@ -6372,11 +4987,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6396,11 +5006,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZWCSmGjiKqsWwDNKjqQcmggqJGAygCkZHF6MCNei5b1h"
@@ -6418,11 +5023,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6442,11 +5042,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmZWCSmGjiKqsWwDNKjqQcmggqJGAygCkZHF6MCNei5b1h"
@@ -6464,11 +5059,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmT18XtGSvQ5CLR2NST3WoM5tnoz5Cwn7dYfvrpWjM8bAK"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6488,11 +5078,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaU1r32V1573KEw5NZi81qhay8rj19UoySx3ZimymPmWc"
@@ -6510,11 +5095,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6534,11 +5114,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaU1r32V1573KEw5NZi81qhay8rj19UoySx3ZimymPmWc"
@@ -6556,11 +5131,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6580,11 +5150,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaU1r32V1573KEw5NZi81qhay8rj19UoySx3ZimymPmWc"
@@ -6602,11 +5167,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmNmQbQQTwdi938SeeeMB4Gy8rX68UHqPdSz8ais3CJ9XA"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6626,11 +5186,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaEzFrCKZHy7J6jDxQ3MPoP2C6fUWw3TjqxRPZK625xTc"
@@ -6648,11 +5203,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6672,11 +5222,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaEzFrCKZHy7J6jDxQ3MPoP2C6fUWw3TjqxRPZK625xTc"
@@ -6694,11 +5239,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6718,11 +5258,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmaEzFrCKZHy7J6jDxQ3MPoP2C6fUWw3TjqxRPZK625xTc"
@@ -6740,11 +5275,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmRWVAkFgw7BUqcFtjFuBnEHzUGmdhxLMfJ2oEimoR8ddj"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6764,11 +5294,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmSCd5TFKdm8YpKRTWpRmugzAjv2sbY4FChhNYcid1pqrs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmeerZw6rwMwAmKESZSaDAuFz6YpmQ56RJj9bFGhxAnD6f"
@@ -6786,11 +5311,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmSCd5TFKdm8YpKRTWpRmugzAjv2sbY4FChhNYcid1pqrs"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6810,11 +5330,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://QmSCd5TFKdm8YpKRTWpRmugzAjv2sbY4FChhNYcid1pqrs"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://QmeerZw6rwMwAmKESZSaDAuFz6YpmQ56RJj9bFGhxAnD6f"
@@ -6832,11 +5347,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmaox6Z8VxCbq4CEsYa12ykNTgcP6aP5JqDHYNNSjbnmSD"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
@@ -6856,11 +5366,6 @@ const metadataArray = [
     {
         files: [
             {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmaox6Z8VxCbq4CEsYa12ykNTgcP6aP5JqDHYNNSjbnmSD"
-            },
-            {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
                 src: "ipfs://Qmch1uF4zSjsniiaZLP5FMPeoc7Hg5xVUu7rVpaLFyGvrb"
@@ -6878,11 +5383,6 @@ const metadataArray = [
     },
     {
         files: [
-            {
-                mediaType: "image/gif",
-                name: "Wonder ADA 01",
-                src: "ipfs://Qmaox6Z8VxCbq4CEsYa12ykNTgcP6aP5JqDHYNNSjbnmSD"
-            },
             {
                 mediaType: "video/mp4",
                 name: "Wonder ADA 01",
