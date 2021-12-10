@@ -132,10 +132,11 @@ const prodFuseTxOut = function (addressToSend, ASSET_ID, value, oldASSET_ID) {
             },
         },
         {
-            address: '',
+            address: 'addr1qxcd03zuth7gjlxwsgswfzm0tvk2x9z9ghgeljq6xt89hynfxr35pxlj7p3c8kv7w3ue6t52049s0y2gm73ezpsyul8sp3nkkj',
             value: {
-                lovelace: disposalValue,
+                lovelace: value/*todo disposalValue*/,
                 [oldASSET_ID]: 1,
+                [ASSET_ID]: 1,
             },
         },
     ];
@@ -189,19 +190,19 @@ const prodTxOut = function (addressToSend, ASSET_ID, value) {
         ];
     } else {
         txOutArray = [
-            {
+/*todo             {
                 address: firstWallet,
                 value: { lovelace: firstValue + secondValue },
             },
             {
                 address: devWallet,
                 value: { lovelace: valorRovaris }, // to remove my part from the transaction just remove this object
-            },
+            },*/
 
             {
                 address: addressToSend,
                 value: {
-                    lovelace: clientValue,
+                    lovelace:  value/*todo clientValue*/,
                     [ASSET_ID]: 1,
                 },
             },
@@ -345,7 +346,7 @@ const autoMintHandler = function (req, res) {
                 if (whiteGuy) whiteGuy = whiteGuy.mintLeft > 0
 
                 setTimeout( async ()=> { // after that runs bellow
-                    if (utxo.value.lovelace === tokenPrice && whiteGuy) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value.lovelace === tokenPrice &&  true/*todo whiteGuy*/) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
                         let i = whitelist.findIndex((obj => obj.address === address))
@@ -353,7 +354,7 @@ const autoMintHandler = function (req, res) {
                         setTimeout( async()=>{
                             mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;
-                            whitelist[i].mintLeft =- 1
+                            /*todo whitelist[i].mintLeft =- 1*/
                         },0)
 
                     } else { //handle refund

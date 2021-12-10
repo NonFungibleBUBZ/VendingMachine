@@ -12,5 +12,7 @@ const createWallet = (account) => {
 };
 
  // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
-createWallet("fuse_woa"); // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
+createWallet("fuse_firstCollection");   // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
+createWallet("fuse_firstCollection");   // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
+createWallet("fuse_woa");   // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
 createWallet("woa"); // just put another name here and call in linux vm: node createWallet.js test / or prod for production wallet
