@@ -4,18 +4,26 @@ const { cardanocliJs } = require( "../utils/cardano" );
 
 
 let create = async  function () {
-        const sender =
+        const receiver =
             cardanocliJs.wallet('firstCollection');
-    const receiver =
+    const  sender =
         cardanocliJs.wallet('fake-wallet-0');
 
         const txInfo = {
             txIn: sender.balance().utxo,
             txOut: [
                 {
+                    address: sender.paymentAddr,
+                    value: {
+                        lovelace:
+                            sender.balance().value.lovelace -
+                            cardanocliJs.toLovelace(35),
+                    },
+                },
+                {
                     address: receiver.paymentAddr,
                     value: {
-                        lovelace: cardanocliJs.toLovelace(2),
+                        lovelace: cardanocliJs.toLovelace(35),
                         "36bfcce8d4e376ed460c83c1efac7f018a891843bfefbc2ec12f8b9d.SuperC4796": 1
                     },
                 },
@@ -31,9 +39,8 @@ let create = async  function () {
             witnessCount: 1,
         });
 
-        txInfo.txOut[0].value.lovelace -= fee;
+        txInfo.txOut[1].value.lovelace -= fee;
 
-        console.log(JSON.stringify(txInfo, null, 2))
 
         const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
 
