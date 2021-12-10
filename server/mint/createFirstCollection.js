@@ -3,21 +3,73 @@ const db = require('./db');
 const metadataArray = require('../mint/metadata/metadata_woa')
 const { cardanocliJs } = require( "../utils/cardano" );
 
-/*
-firstCollection.allBubz.forEach( (bub) => {
-                bub.available = true
-            })
 
-            firstCollection.lastMinted = {}
-            firstCollection.bubzInDispensary = []
-            firstCollection.totalValueCollected = 0
-            firstCollection.valueSentOut = 0
-            firstCollection.ValueSentDeveloper = 0
-            firstCollection.nftDroped = []
-            firstCollection.totalMintingCost = 0
-            firstCollection.totalSentDonation = 0
-            firstCollection.availableBubz = firstCollection.allBubz*/
 let create = async  function () {
+
+
+    const receiver =
+        cardanocliJs.wallet('woa');
+    const  sender =
+        cardanocliJs.wallet('fake-wallet-0');
+
+    const txInfo = {
+        txIn: sender.balance().utxo,
+        txOut: [
+            {
+                address: sender.paymentAddr,
+                value: {
+                    lovelace:
+                        sender.balance().value.lovelace -
+                        cardanocliJs.toLovelace(35),
+                },
+            },
+            {
+                address: receiver.paymentAddr,
+                value: {
+                    lovelace: cardanocliJs.toLovelace(35)
+                },
+            },
+        ],
+    };
+
+
+    const raw = cardanocliJs.transactionBuildRaw(txInfo);
+
+    const fee = cardanocliJs.transactionCalculateMinFee({
+        ...txInfo,
+        txBody: raw,
+        witnessCount: 1,
+    });
+
+    txInfo.txOut[0].value.lovelace -= fee;
+
+
+    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
+
+    const txSigned = cardanocliJs.transactionSign({
+        txBody: tx,
+        signingKeys: [sender.payment.skey],
+    });
+
+    console.log('aaaaaaaaaaaa')
+
+    const txHash = cardanocliJs.transactionSubmit(txSigned);
+
+    console.log(txHash);
+
+}
+
+try {
+    create().then( () => {
+
+    })
+} catch (err) {
+    console.log(err, ' a?')
+}
+
+
+
+/*
 
     let _allBubz = []
 
@@ -40,19 +92,10 @@ let create = async  function () {
             }
         )
     },0)
-}
-
-try {
-    create().then( () => {
-
-    })
-} catch (err) {
-    console.log(err, ' a?')
-}
 
 
+addr_test1qrt2upfvr0rc3j0y2earhfzzx2sp5qcxr0lr63y2kjdzz7dtvnxf35e6yyg0fr2hvc035r6hgq9vdf09q37hqj7zqads2z0nr4
 
-/*
 
         const receiver =
             cardanocliJs.wallet('firstCollection');
