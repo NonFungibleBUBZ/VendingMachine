@@ -565,6 +565,12 @@ const fuseHandler = function (req, res) {
 
 const fuse = function (receiver, utxo, _metadata, index) {
 
+    const mintScript = {
+        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.params.collection).name),
+        type: "sig",
+    };
+    const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript);
+
     const metadata = { // declares the basse of the transaction metadata
         721: {
             [POLICY_ID]: {
