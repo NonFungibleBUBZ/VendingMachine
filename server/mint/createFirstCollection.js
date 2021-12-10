@@ -6,7 +6,7 @@ const { cardanocliJs } = require( "../utils/cardano" );
 
 let drop = cardanocliJs.wallet('dropWallet')
 
-let create = async  function (sender, transactionValue) {
+let create = async  function () {
         const receiver =
             cardanocliJs.wallet('firstCollection').paymentAddr;
 
@@ -14,10 +14,10 @@ let create = async  function (sender, transactionValue) {
             txIn: cardanocliJs.queryUtxo(cardanocliJs.wallet('fake-wallet-0').paymentAddr),
             txOut: [
                 {
-                    address: sender.paymentAddr,
+                    address: cardanocliJs.wallet('fake-wallet-0').paymentAddr,
                     value: {
                         lovelace:
-                            sender.balance().value.lovelace -
+                            cardanocliJs.wallet('fake-wallet-0').balance().value.lovelace -
                             cardanocliJs.toLovelace(2),
                     },
                 },
@@ -46,7 +46,7 @@ let create = async  function (sender, transactionValue) {
 
         const txSigned = cardanocliJs.transactionSign({
             txBody: tx,
-            signingKeys: [sender.payment.skey],
+            signingKeys: [cardanocliJs.wallet('fake-wallet-0').payment.skey],
         });
 
         console.log('aaaaaaaaaaaa')
