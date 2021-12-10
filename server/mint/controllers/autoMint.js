@@ -590,7 +590,7 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
 
     const txInfo = {
         txIn: [utxo],
-        txOut: createFuseTxOut(receiver, ASSET_ID, fusePrice, Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        txOut: createFuseTxOut(receiver, ASSET_ID, 34.814127, Object.keys(utxo.value)[1]), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
