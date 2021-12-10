@@ -339,15 +339,21 @@ const autoMintHandler = function (req, res) {
             getAddressByTransactionId(utxo.txHash,req.params.collection, async (address) => { // gets wallet address by blockFrost
 
                 let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
+/*objIndex = myArray.findIndex((obj => obj.id == 1));*/
+                let whiteGuy = whitelist.find(sender => sender.address === address)
+
+                if (whiteGuy) whiteGuy = whiteGuy.mintLeft > 0
 
                 setTimeout( async ()=> { // after that runs bellow
-                    if (utxo.value.lovelace === tokenPrice && whitelist.find(sender => sender.address === address)) { // if the value is different from 25 Ada it gets refunded
+                    if (utxo.value.lovelace === tokenPrice && whiteGuy) { // if the value is different from 25 Ada it gets refunded
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
-
+                        let i = whitelist.findIndex((obj => obj.address === address))
+                        
                         setTimeout( async()=>{
                             mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;
+                            whitelist[i].mintLeft =- 1
                         },0)
 
                     } else { //handle refund
