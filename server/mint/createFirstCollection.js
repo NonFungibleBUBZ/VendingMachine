@@ -6,7 +6,7 @@ const db_utils = require('../db.js');
 
 let create = async  function () {
     const receiver =
-        cardanocliJs.wallet('fake-wallet-4');
+        cardanocliJs.wallet('woa');
     const  sender =
         cardanocliJs.wallet('fake-wallet-0');
 
