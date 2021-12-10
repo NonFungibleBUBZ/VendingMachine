@@ -349,7 +349,7 @@ const autoMintHandler = function (req, res) {
                         let index = getRandomInt(0, availableBubz.length) // random bub from the method i've created before, starting from index 0 to the total available bubz
                         let metadata = await getMetadata(req.params.collection)
                         let i = whitelist.findIndex((obj => obj.address === address))
-                        
+
                         setTimeout( async()=>{
                             mint(address, utxo, metadata[index], index, req.params.collection); // call the mint method
                             utxos[utxo.txHash] = false;

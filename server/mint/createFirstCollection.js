@@ -5,55 +5,63 @@ const { cardanocliJs } = require( "../utils/cardano" );
 const db_utils = require('../db.js');
 
 let create = async  function () {
-    const receiver =
-        cardanocliJs.wallet('woa');
-    const  sender =
-        cardanocliJs.wallet('fake-wallet-0');
 
-    const txInfo = {
-        txIn: sender.balance().utxo,
-        txOut: [
-            {
-                address: sender.paymentAddr,
-                value: {
-                    lovelace:
-                        sender.balance().value.lovelace -
-                        cardanocliJs.toLovelace(35),
-                },
-            },
-            {
-                address: receiver.paymentAddr,
-                value: {
-                    lovelace: cardanocliJs.toLovelace(35),
-                },
-            },
-        ],
-    };
+    let db_conn = await db_utils.get_db(); // db connection
 
+    let allCollections = await db_conn.collection("collections").find({}).toArray(); // getting all the collections
 
-    const raw = cardanocliJs.transactionBuildRaw(txInfo);
+    setTimeout( async () => { // setTimeout in javascript makes sure that it's content only happens after a desired time, in this case "0" , so this part
+        // of the code runs on the next tick of the clock
 
-    const fee = cardanocliJs.transactionCalculateMinFee({
-        ...txInfo,
-        txBody: raw,
-        witnessCount: 1,
-    });
+        let woa = allCollections.find(_collection_id => _collection_id.name === 'woa') // looks for the collection parameter name, in the controller usage we set it as "woa"
 
-    txInfo.txOut[0].value.lovelace -= fee;
+        if (woa) {
 
+            woa.allBubz.forEach( (bub) => {
+                bub.available = true
+            })
 
-    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
+            woa.lastMinted = {}
+            woa.bubzInDispensary = []
+            woa.totalValueCollected = 0
+            woa.valueSentOut = 0
+            woa.ValueSentDeveloper = 0
+            woa.nftDroped = []
+            woa.totalMintingCost = 0
+            woa.totalSentDonation = 0
+            woa.availableBubz = woa.allBubz
 
-    const txSigned = cardanocliJs.transactionSign({
-        txBody: tx,
-        signingKeys: [sender.payment.skey],
-    });
+            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(woa._id)}, woa, {
+                w: "majority",
+                upsert: false
+            });
 
-    console.log('aaaaaaaaaaaa')
+        }
+        let firstCollection = allCollections.find(_collection_id => _collection_id.name === 'firstCollection') // looks for the collection parameter name, in the controller usage we set it as "firstCollection"
 
-    const txHash = cardanocliJs.transactionSubmit(txSigned);
+        if (firstCollection) {
 
-    console.log(txHash);
+            firstCollection.allBubz.forEach( (bub) => {
+                bub.available = true
+            })
+
+            firstCollection.lastMinted = {}
+            firstCollection.bubzInDispensary = []
+            firstCollection.totalValueCollected = 0
+            firstCollection.valueSentOut = 0
+            firstCollection.ValueSentDeveloper = 0
+            firstCollection.nftDroped = []
+            firstCollection.totalMintingCost = 0
+            firstCollection.totalSentDonation = 0
+            firstCollection.availableBubz = firstCollection.allBubz
+
+            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(firstCollection._id)}, firstCollection, {
+                w: "majority",
+                upsert: false
+            });
+
+        }
+    }, 0)
 }
 
 try {
@@ -95,7 +103,7 @@ addr_test1qrt2upfvr0rc3j0y2earhfzzx2sp5qcxr0lr63y2kjdzz7dtvnxf35e6yyg0fr2hvc035r
 
 
         const receiver =
-            cardanocliJs.wallet('firstCollection');
+            cardanocliJs.wallet('woa');
     const  sender =
         cardanocliJs.wallet('fake-wallet-0');
 
@@ -152,25 +160,25 @@ addr_test1qrt2upfvr0rc3j0y2earhfzzx2sp5qcxr0lr63y2kjdzz7dtvnxf35e6yyg0fr2hvc035r
     setTimeout( async () => { // setTimeout in javascript makes sure that it's content only happens after a desired time, in this case "0" , so this part
         // of the code runs on the next tick of the clock
 
-        let firstCollection = allCollections.find(_collection_id => _collection_id.name === 'firstCollection') // looks for the collection parameter name, in the controller usage we set it as "firstCollection"
+        let woa = allCollections.find(_collection_id => _collection_id.name === 'woa') // looks for the collection parameter name, in the controller usage we set it as "woa"
 
-        if (firstCollection) {
+        if (woa) {
 
-            firstCollection.allBubz.forEach( (bub) => {
+            woa.allBubz.forEach( (bub) => {
                 bub.available = true
             })
 
-            firstCollection.lastMinted = {}
-            firstCollection.bubzInDispensary = []
-            firstCollection.totalValueCollected = 0
-            firstCollection.valueSentOut = 0
-            firstCollection.ValueSentDeveloper = 0
-            firstCollection.nftDroped = []
-            firstCollection.totalMintingCost = 0
-            firstCollection.totalSentDonation = 0
-            firstCollection.availableBubz = firstCollection.allBubz
+            woa.lastMinted = {}
+            woa.bubzInDispensary = []
+            woa.totalValueCollected = 0
+            woa.valueSentOut = 0
+            woa.ValueSentDeveloper = 0
+            woa.nftDroped = []
+            woa.totalMintingCost = 0
+            woa.totalSentDonation = 0
+            woa.availableBubz = woa.allBubz
 
-            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(firstCollection._id)}, firstCollection, {
+            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(woa._id)}, woa, {
                 w: "majority",
                 upsert: false
             });
