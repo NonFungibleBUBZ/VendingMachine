@@ -340,6 +340,10 @@ const autoMintHandler = function (req, res) {
 
                 let availableBubz = await get_availableBubz(req.params.collection) // get the current available bubz in the database
 /*objIndex = myArray.findIndex((obj => obj.id == 1));*/
+
+                console.log(address)
+                console.log(whitelist.find(sender => sender.address === address))
+
                 let whiteGuy = whitelist.find(sender => sender.address === address)
 
                 if (whiteGuy) whiteGuy = whiteGuy.mintLeft > 0
