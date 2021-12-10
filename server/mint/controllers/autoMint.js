@@ -495,7 +495,7 @@ const fuseHandler = function (req, res) {
     console.log(currentUtxos)
 
     const mintScript = {
-        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.param.collection).name),
+        keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(req.params.collection).name),
         type: "sig",
     };
     const POLICY_ID = cardanocliJs.transactionPolicyid(mintScript);
