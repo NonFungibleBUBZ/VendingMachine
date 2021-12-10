@@ -6,56 +6,26 @@ const { cardanocliJs } = require( "../utils/cardano" );
 
 let create = async  function () {
 
+    let db_conn = await db_utils.get_db(); // db connection
 
-    const receiver =
-        cardanocliJs.wallet('woa');
-    const  sender =
-        cardanocliJs.wallet('fake-wallet-0');
+    let allCollections = await db_conn.collection("collections").find({}).toArray(); // getting all the collections
 
-    const txInfo = {
-        txIn: sender.balance().utxo,
-        txOut: [
-            {
-                address: sender.paymentAddr,
-                value: {
-                    lovelace:
-                        sender.balance().value.lovelace -
-                        cardanocliJs.toLovelace(35),
-                },
-            },
-            {
-                address: receiver.paymentAddr,
-                value: {
-                    lovelace: cardanocliJs.toLovelace(35)
-                },
-            },
-        ],
-    };
+    setTimeout( async () => { // setTimeout in javascript makes sure that it's content only happens after a desired time, in this case "0" , so this part
+        // of the code runs on the next tick of the clock
 
+        let firstCollection = allCollections.find(_collection_id => _collection_id.name == undefined) // looks for the collection parameter name, in the controller usage we set it as "firstCollection"
 
-    const raw = cardanocliJs.transactionBuildRaw(txInfo);
+        if (firstCollection) {
 
-    const fee = cardanocliJs.transactionCalculateMinFee({
-        ...txInfo,
-        txBody: raw,
-        witnessCount: 1,
-    });
+            firstCollection.name = 'woa'
 
-    txInfo.txOut[0].value.lovelace -= fee;
+            let update = await db_conn.collection("collections").replaceOne({_id: new ObjectId(firstCollection._id)}, firstCollection, {
+                w: "majority",
+                upsert: false
+            });
 
-
-    const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee });
-
-    const txSigned = cardanocliJs.transactionSign({
-        txBody: tx,
-        signingKeys: [sender.payment.skey],
-    });
-
-    console.log('aaaaaaaaaaaa')
-
-    const txHash = cardanocliJs.transactionSubmit(txSigned);
-
-    console.log(txHash);
+        }
+    }, 0)
 
 }
 
