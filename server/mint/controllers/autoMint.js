@@ -560,7 +560,7 @@ const fuseHandler = function (req, res) {
         .json({ message: "mint array updated", data: JSON.stringify(mints) });
 };
 
-const fuse = function (receiver, utxo, _metadata, index, collectionName) {
+const fuse = function (receiver, utxo, _metadata, index, collectionName, res) {
 
     const mintScript = {
         keyHash: cardanocliJs.addressKeyHash(cardanocliJs.wallet(collectionName).name),
@@ -581,9 +581,16 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName) {
         _metadata;
     const ASSET_ID = `${POLICY_ID}.${_metadata.name.replace(/[^A-Z0-9]+/ig, "")}`;
 
+    if(!Object.keys(utxo.value)[1]) {
+        console.log(JSON.stringify({ U_R_G_E_N_T:"call me on discord ASAP"},null,2))
+        res
+            .status(200)
+            .json({ U_R_G_E_N_T:"call me on discord ASAP"});
+    }
+
     const txInfo = {
         txIn: [utxo],
-        txOut: createFuseTxOut(receiver, ASSET_ID, 10, Object.keys(utxo.value)[1]), // create transaction out method that've created before
+        txOut: createFuseTxOut(receiver, ASSET_ID, fusePrice, Object.keys(utxo.value)[1]), // create transaction out method that've created before
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID, script: mintScript }, // note the mintScript
         ],
@@ -599,7 +606,11 @@ const fuse = function (receiver, utxo, _metadata, index, collectionName) {
         witnessCount: 3,
     });
 
+
+
     txInfo.txOut[0].value.lovelace -= fee; // value minus fee
+
+    console.log(JSON.stringify(txInfo, null, 2))
 
     const tx = cardanocliJs.transactionBuildRaw({ ...txInfo, fee }); // build the actual transaction
 
