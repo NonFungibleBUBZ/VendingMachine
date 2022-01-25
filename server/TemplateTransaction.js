@@ -98,6 +98,8 @@ const mintAsset = function (value, addressToSend) {
                 },
             },
         ],
+       
+        // ^^^^^^^^^^^^^^ How are the metada tied to ASSET_IDS? here?
         mint: [
             { action: "mint", quantity: 1, asset: ASSET_ID1, script: mintScript },
             { action: "mint", quantity: 1, asset: ASSET_ID2, script: mintScript }, // in order to increase add one more line of these
